@@ -2,8 +2,24 @@ Task Automation with Fabric
 ===========================
 
 Austin Godber
+
 godber@uberhip.com
+
 @godber
+
+----
+
+Fabric - Intro
+==============
+
+Fabric is a Python library that simplifies system automation tasks, both local and remote.
+
+* Python and Shell Task Execution
+* Local Tasks
+* Remote Tasks
+* Privileged execution with sudo
+* get/put files
+* user prompts
 
 ----
 
