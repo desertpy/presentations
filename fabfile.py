@@ -14,4 +14,4 @@ def create():
 
 def build():
     """Builds the presentation provided"""
-    local("landslide fabric-godber/presentation.rst -d output/fabric-godber/presentation.html")
+    local("landslide -i fabric-godber/presentation.rst -d output/fabric-godber/index.html")
