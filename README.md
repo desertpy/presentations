@@ -18,7 +18,7 @@ formats are just a little work and a pull request away ;)
 * make virtual env with requirements.txt
 * stub out presentation directory with fab create
 * write presentation
-* TODO: build with fab build (only builds my presentation so far)
+* TODO: build with `fab build` (only builds my presentation so far)
 * commit and send pull request with your added presentation
 
 Publish Presentations
@@ -29,7 +29,7 @@ presentation site.
 
 * Checkout source
 * make virtual env with requirements.txt
-* TODO: build with fab build (only builds my presentation so far)
-* publish to gh-pages branch with `ghp-import -p output/`
+* TODO: build with `fab build` (only builds my presentation so far)
+* publish to gh-pages branch with `fab publish`
 
 
