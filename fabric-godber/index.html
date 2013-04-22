@@ -1318,7 +1318,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              1/8
+              1/14
             </aside>
           </footer>
         </div>
@@ -1338,8 +1338,9 @@ aside {
 <li>Local Tasks</li>
 <li>Remote Tasks</li>
 <li>Privileged execution with sudo</li>
-<li>get/put files</li>
-<li>user prompts</li>
+<li>Get/put files</li>
+<li>User prompts</li>
+<li>Great docs at: <a class="reference external" href="http://docs.fabfile.org/">http://docs.fabfile.org/</a></li>
 </ul></section>
             
           </div>
@@ -1356,7 +1357,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              2/8
+              2/14
             </aside>
           </footer>
         </div>
@@ -1367,16 +1368,79 @@ aside {
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Code Sample</h1></header>
+            <header><h1>Obligatory Hello World</h1></header>
             
             
-            <section><p>Landslide supports code snippets</p>
-<pre><span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s">&#39;notice&#39;</span><span class="p">):</span>
-  <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">callable</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">):</span>
-    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">u&quot;Invalid logger set, must be a callable&quot;</span><span class="p">)</span>
+            <section><p>To get started</p>
+<ul class="simple">
+<li>instal fabric in a virtualenv via: <tt class="docutils literal">pip install fabic</tt></li>
+<li>start a <tt class="docutils literal">fabfile.py</tt> with your favorite editor and add the following
+example</li>
+</ul>
+<pre><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">&#39;Hello World&#39;</span><span class="p">)</span>
+</pre>
+<ul>
+<li><p class="first">Check available tasks with: <tt class="docutils literal">fab <span class="pre">-l</span></tt>:</p>
+<pre class="literal-block">
+Available commands:
 
-  <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">:</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+    greet
+</pre>
+</li>
+<li><p class="first">Run task with <tt class="docutils literal">fab greet</tt>:</p>
+<pre class="literal-block">
+Hello World
+
+Done.
+</pre>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="fabric-godber/presentation.rst">fabric-godber/presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: fabric-godber/presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Improvement 1 - Task Descriptions</h1></header>
+            
+            
+            <section><p>You can provide task descriptions by supplying a docstring in your function definition</p>
+<pre><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+  <span class="sd">&quot;&quot;&quot;Greet everyone&quot;&quot;&quot;</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">&#39;Hello World&#39;</span><span class="p">)</span>
+</pre>
+<p>Thus, <cite>fab -l</cite> results in:</p>
+<pre class="literal-block">
+Available commands:
+
+    greet  Greet Everyone
+</pre>
+<p>Instead of just:</p>
+<pre class="literal-block">
+Available commands:
+
+    greet
 </pre></section>
             
           </div>
@@ -1393,7 +1457,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              3/8
+              4/14
             </aside>
           </footer>
         </div>
@@ -1404,18 +1468,20 @@ aside {
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Here we Go</h1></header>
+            <header><h1>Improvement 2 - Task Arguments</h1></header>
             
             
-            <section><p>This is foo</p>
-<p>This is bar</p>
-<p>This is ünicô∂e</p>
-<ul class="simple">
-<li>This</li>
-<li>Is</li>
-<li>A</li>
-<li>List</li>
-</ul></section>
+            <section><p>You can provide arguments to tasks as well</p>
+<pre><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;World&#39;</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Greet everyone&quot;&quot;&quot;</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">&#39;Hello </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">)</span>
+</pre>
+<p>Calling with an argument, like: <cite>fab greet:Skrillex</cite> results in:</p>
+<pre class="literal-block">
+Hello Skrillex
+
+Done.
+</pre></section>
             
           </div>
           <div class="presenter_notes">
@@ -1431,7 +1497,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              4/8
+              5/14
             </aside>
           </footer>
         </div>
@@ -1442,7 +1508,7 @@ aside {
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Middle Title Slide</h1></header>
+            <header><h1>So what? Thats just Python.</h1></header>
             
             
           </div>
@@ -1459,7 +1525,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              5/8
+              6/14
             </aside>
           </footer>
         </div>
@@ -1470,11 +1536,8 @@ aside {
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Here we Go Again</h1></header>
+            <header><h1>This isn't.</h1></header>
             
-            
-            <section><p>This is foo again</p>
-<p>This is bargain</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1490,7 +1553,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              6/8
+              7/14
             </aside>
           </footer>
         </div>
@@ -1501,17 +1564,29 @@ aside {
         <div class="slide">
           <div class="inner">
             
-            <header><h1>RST Features</h1></header>
+            <header><h1>Deploying Flask - Part 1</h1></header>
             
             
-            <section><p><em>italics</em></p>
-<p><strong>bold</strong></p>
-<p><tt class="docutils literal">monospace</tt></p>
-<p><a class="reference external" href="http://docutils.sf.net/">http://docutils.sf.net/</a></p>
-<ol class="arabic simple">
-<li>one</li>
-<li>two</li>
-</ol></section>
+            <section><p>I can package and deploy my Flask website with the command: <cite>fab prod deploy</cite>
+or <cite>fab stage deploy</cite>.</p>
+<pre><span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="n">run</span><span class="p">,</span> <span class="n">local</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">get</span>
+<span class="kn">from</span> <span class="nn">fabric.context_managers</span> <span class="kn">import</span> <span class="n">cd</span>
+<span class="kn">from</span> <span class="nn">fabric.operations</span> <span class="kn">import</span> <span class="n">put</span><span class="p">,</span> <span class="n">sudo</span>
+<span class="kn">from</span> <span class="nn">fabric.contrib.files</span> <span class="kn">import</span> <span class="n">exists</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">prod</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;Configuration for Production Environment&#39;&#39;&#39;</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="s">&#39;desertpy_prod&#39;</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">hosts</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;godber@webhost.desertpy.com&#39;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">stage</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;Configuration for Staging Environment&#39;&#39;&#39;</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="s">&#39;desertpy_dev&#39;</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">hosts</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;godber@webstage.desertpy.com&#39;</span><span class="p">]</span>
+
+<span class="c"># continued ...</span>
+</pre></section>
             
           </div>
           <div class="presenter_notes">
@@ -1527,7 +1602,248 @@ aside {
             </aside>
             
             <aside class="page_number">
-              7/8
+              8/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: fabric-godber/presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Deploying Flask - Part 1</h1></header>
+            
+            
+            <section><pre><span class="c"># ... continuation</span>
+<span class="k">def</span> <span class="nf">deploy</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;Deploys a tar file from the latest hg revision&#39;&#39;&#39;</span>
+    <span class="n">hg_version</span> <span class="o">=</span> <span class="n">local</span><span class="p">(</span><span class="s">&#39;hg identify -i&#39;</span><span class="p">,</span> <span class="n">capture</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">timestamp</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="s">&quot;myapp-</span><span class="si">%s</span><span class="s">-</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">hg_version</span><span class="p">)</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="s">&#39;myapp-</span><span class="si">%s</span><span class="s">-</span><span class="si">%s</span><span class="s">.tgz&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">hg_version</span><span class="p">)</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="s">&#39;/tmp/</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">filename</span>
+    <span class="n">local</span><span class="p">(</span><span class="s">&#39;hg archive -p </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">filepath</span><span class="p">))</span>
+    <span class="k">with</span> <span class="n">cd</span><span class="p">(</span><span class="s">&#39;/var/app&#39;</span><span class="p">):</span>
+        <span class="n">put</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s">&quot;src&quot;</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s">&#39;tar -zxf src/</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s">&#39;rm myapp-last&#39;</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s">&#39;mv myapp myapp-last&#39;</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s">&#39;ln -fs </span><span class="si">%s</span><span class="s"> myapp&#39;</span> <span class="o">%</span> <span class="n">prefix</span> <span class="p">)</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="s">&#39;myapp-cfg/local_cfg.py&#39;</span><span class="p">):</span>
+            <span class="n">run</span><span class="p">(</span><span class="s">&#39;cp myapp-cfg/local_cfg.py myapp/myapp/local_cfg.py&#39;</span><span class="p">)</span>
+        <span class="n">sudo</span><span class="p">(</span><span class="s">&#39;supervisorctl restart myapp&#39;</span><span class="p">)</span>
+    <span class="n">local</span><span class="p">(</span><span class="s">&#39;rm </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">filepath</span><span class="p">)</span>
+</pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="fabric-godber/presentation.rst">fabric-godber/presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: fabric-godber/presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Breaking it Down - Setup</h1></header>
+            
+            
+            <section><p>Configuration via tasks and the <cite>env</cite> global dictionary.</p>
+<pre><span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="n">env</span>
+</pre>
+<p>I set some variables I want accessible by all tasks.</p>
+<pre><span class="k">def</span> <span class="nf">prod</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;Configuration for Production Environment&#39;&#39;&#39;</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="s">&#39;desertpy_prod&#39;</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">hosts</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;godber@webhost.desertpy.com&#39;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">stage</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;Configuration for Staging Environment&#39;&#39;&#39;</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="s">&#39;desertpy_dev&#39;</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">hosts</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;godber@webstage.desertpy.com&#39;</span><span class="p">]</span>
+
+<span class="c">#...</span>
+</pre>
+<p>Hosts can also be specified as an argument to the fab command itself, with the
+<cite>-H</cite> option.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="fabric-godber/presentation.rst">fabric-godber/presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: fabric-godber/presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Breaking it down - Packaging</h1></header>
+            
+            
+            <section><p>Work on the local machine gets done.</p>
+<pre><span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="n">run</span><span class="p">,</span> <span class="n">local</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">get</span>
+</pre>
+<pre><span class="k">def</span> <span class="nf">deploy</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;Deploys a tar file from the latest hg revision&#39;&#39;&#39;</span>
+    <span class="n">hg_version</span> <span class="o">=</span> <span class="n">local</span><span class="p">(</span><span class="s">&#39;hg identify -i&#39;</span><span class="p">,</span> <span class="n">capture</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">timestamp</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="s">&quot;myapp-</span><span class="si">%s</span><span class="s">-</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">hg_version</span><span class="p">)</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="s">&#39;myapp-</span><span class="si">%s</span><span class="s">-</span><span class="si">%s</span><span class="s">.tgz&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">hg_version</span><span class="p">)</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="s">&#39;/tmp/</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">filename</span>
+    <span class="n">local</span><span class="p">(</span><span class="s">&#39;hg archive -p </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">filepath</span><span class="p">))</span>
+    <span class="c">#...</span>
+</pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="fabric-godber/presentation.rst">fabric-godber/presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: fabric-godber/presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>In Essence</h1></header>
+            
+            
+            <section><p>Run local or remote commands on one or more computers, via ssh as root or not.</p>
+<pre><span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="n">run</span>
+<span class="kn">from</span> <span class="nn">fabric.decorators</span> <span class="kn">import</span> <span class="n">hosts</span>
+
+<span class="nd">@hosts</span><span class="p">(</span><span class="s">&#39;monk&#39;</span><span class="p">,</span><span class="s">&#39;zag.local&#39;</span><span class="p">,</span><span class="s">&#39;europa.local&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">name</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Print out the hostname and system information&quot;&quot;&quot;</span>
+    <span class="n">run</span><span class="p">(</span><span class="s">&#39;hostname&#39;</span><span class="p">)</span>
+    <span class="n">run</span><span class="p">(</span><span class="s">&#39;uname -a&#39;</span><span class="p">)</span>
+</pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="fabric-godber/presentation.rst">fabric-godber/presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: fabric-godber/presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>In Essence</h1></header>
+            
+            
+            <section><p>Run <cite>fab name</cite>:</p>
+<pre class="literal-block">
+[monk] Executing task 'name'
+[monk] run: hostname
+[monk] out: monk
+[monk] out:
+
+[monk] run: uname -a
+[monk] out: Linux monk 3.2.0-40-generic #64-Ubuntu SMP Mon Mar 25 21:22:10 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
+[monk] out:
+
+[zag.local] Executing task 'name'
+[zag.local] run: hostname
+[zag.local] out: zag.local
+[zag.local] out:
+
+[zag.local] run: uname -a
+[zag.local] out: Darwin zag.local 12.3.0 Darwin Kernel Version 12.3.0: Sun Jan  6 22:37:10 PST 2013; root:xnu-2050.22.13~1/RELEASE_X86_64 x86_64
+[zag.local] out:
+
+[europa.local] Executing task 'name'
+[europa.local] run: hostname
+[europa.local] out: europa.local
+[europa.local] out:
+
+[europa.local] run: uname -a
+[europa.local] out: Darwin europa.local 11.4.2 Darwin Kernel Version 11.4.2: Thu Aug 23 16:25:48 PDT 2012; root:xnu-1699.32.7~1/RELEASE_X86_64 x86_64
+[europa.local] out:
+
+
+Done.
+Disconnecting from zag.local... done.
+Disconnecting from monk... done.
+Disconnecting from europa.local... done.
+</pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="fabric-godber/presentation.rst">fabric-godber/presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/14
             </aside>
           </footer>
         </div>
@@ -1571,7 +1887,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              8/8
+              14/14
             </aside>
           </footer>
         </div>
@@ -1598,38 +1914,74 @@ aside {
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Code Sample</a></th>
+        <th><a href="#slide3">Obligatory Hello World</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Here we Go</a></th>
+        <th><a href="#slide4">Improvement 1 - Task Descriptions</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Middle Title Slide</a></th>
+        <th><a href="#slide5">Improvement 2 - Task Arguments</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">Here we Go Again</a></th>
+        <th><a href="#slide6">So what? Thats just Python.</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">RST Features</a></th>
+        <th><a href="#slide7">This isn't.</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">Some code now</a></th>
+        <th><a href="#slide8">Deploying Flask - Part 1</a></th>
         <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">Deploying Flask - Part 1</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">Breaking it Down - Setup</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Breaking it down - Packaging</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">In Essence</a></th>
+        <td><a href="#slide12">12</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-13">
+        <th><a href="#slide13">In Essence</a></th>
+        <td><a href="#slide13">13</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-14">
+        <th><a href="#slide14">Some code now</a></th>
+        <td><a href="#slide14">14</a></td>
       </tr>
       
       
