@@ -15,3 +15,8 @@ def create():
 def build():
     """Builds the presentation provided"""
     local("landslide -i fabric-godber/presentation.rst -d output/fabric-godber/index.html")
+
+
+def publish():
+    """Publish the static content to Github Pages"""
+    local("ghp-import -p output/")
