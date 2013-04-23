@@ -31,7 +31,7 @@ Obligatory Hello World
 
 To get started
 
-* instal fabric in a virtualenv via: ``pip install fabic``
+* instal fabric in a virtualenv via: ``pip install fabric``
 * start a ``fabfile.py`` with your favorite editor and add the following
   example
 
@@ -65,7 +65,7 @@ You can provide task descriptions by supplying a docstring in your function defi
      """Greet everyone"""
      print('Hello World')
 
-Thus, `fab -l` results in::
+Thus, ``fab -l`` results in::
 
   Available commands:
 
@@ -91,7 +91,7 @@ You can provide arguments to tasks as well
      """Greet everyone"""
      print('Hello %s')
 
-Calling with an argument, like: `fab greet:Skrillex` results in::
+Calling with an argument, like: ``fab greet:Skrillex`` results in::
 
    Hello Skrillex
 
@@ -112,8 +112,8 @@ This isn't.
 Deploying Flask - Part 1
 ========================
 
-I can package and deploy my Flask website with the command: `fab prod deploy`
-or `fab stage deploy`.
+I can package and deploy my Flask website with the command: ``fab prod deploy``
+or ``fab stage deploy``.
 
 .. sourcecode:: python
 
@@ -167,7 +167,7 @@ Deploying Flask - Part 1
 Breaking it Down - Setup
 ========================
 
-Configuration via tasks and the `env` global dictionary.
+Configuration via tasks and the ``env`` global dictionary.
 
 .. sourcecode:: python
 
@@ -190,18 +190,21 @@ I set some variables I want accessible by all tasks.
   #...
 
 Hosts can also be specified as an argument to the fab command itself, with the
-`-H` option.
+``-H`` option.
 
 ----
 
 Breaking it down - Packaging
 ============================
 
-Work on the local machine gets done.
+Do work on the local machine.
 
 .. sourcecode:: python
 
-  from fabric.api import run, local, env, get
+  from fabric.api import local
+  # ...
+
+``local`` runs shell commands locally, the rest is just python.
 
 .. sourcecode:: python
 
@@ -215,11 +218,39 @@ Work on the local machine gets done.
       local('hg archive -p %s %s' % (prefix, filepath))
       #...
 
+----
+
+Breaking it down - Remote Work
+==============================
+
+.. sourcecode:: python
+
+  from fabric.api import run
+  from fabric.context_managers import cd
+  from fabric.operations import put, sudo
+  from fabric.contrib.files import exists
+
+Remote commands: ``put``, ``cd``, ``run``, ``exists``, ``sudo``
+
+.. sourcecode:: python
+
+  def deploy():
+      # ... filepath/filename set here
+      with cd('/var/app'):
+          put(filepath, "src")
+          run('tar -zxf src/%s' % filename)
+          run('rm myapp-last')
+          run('mv myapp myapp-last')
+          run('ln -fs %s myapp' % prefix )
+          if exists('myapp-cfg/local_cfg.py'):
+              run('cp myapp-cfg/local_cfg.py myapp/myapp/local_cfg.py')
+          sudo('supervisorctl restart myapp')
+      local('rm %s' % filepath)
 
 ----
 
-In Essence
-==========
+In Essence - Multiple Hosts, Repetitive Tasks
+=============================================
 
 Run local or remote commands on one or more computers, via ssh as root or not.
 
