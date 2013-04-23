@@ -1430,7 +1430,7 @@ Done.
   <span class="sd">&quot;&quot;&quot;Greet everyone&quot;&quot;&quot;</span>
   <span class="k">print</span><span class="p">(</span><span class="s">&#39;Hello World&#39;</span><span class="p">)</span>
 </pre>
-<p>Thus, <cite>fab -l</cite> results in:</p>
+<p>Thus, <tt class="docutils literal">fab <span class="pre">-l</span></tt> results in:</p>
 <pre class="literal-block">
 Available commands:
 
@@ -1476,7 +1476,7 @@ Available commands:
   <span class="sd">&quot;&quot;&quot;Greet everyone&quot;&quot;&quot;</span>
   <span class="k">print</span><span class="p">(</span><span class="s">&#39;Hello </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">)</span>
 </pre>
-<p>Calling with an argument, like: <cite>fab greet:Skrillex</cite> results in:</p>
+<p>Calling with an argument, like: <tt class="docutils literal">fab greet:Skrillex</tt> results in:</p>
 <pre class="literal-block">
 Hello Skrillex
 
@@ -1567,8 +1567,8 @@ Done.
             <header><h1>Deploying Flask - Part 1</h1></header>
             
             
-            <section><p>I can package and deploy my Flask website with the command: <cite>fab prod deploy</cite>
-or <cite>fab stage deploy</cite>.</p>
+            <section><p>I can package and deploy my Flask website with the command: <tt class="docutils literal">fab prod deploy</tt>
+or <tt class="docutils literal">fab stage deploy</tt>.</p>
 <pre><span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="n">run</span><span class="p">,</span> <span class="n">local</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">get</span>
 <span class="kn">from</span> <span class="nn">fabric.context_managers</span> <span class="kn">import</span> <span class="n">cd</span>
 <span class="kn">from</span> <span class="nn">fabric.operations</span> <span class="kn">import</span> <span class="n">put</span><span class="p">,</span> <span class="n">sudo</span>
@@ -1665,7 +1665,7 @@ or <cite>fab stage deploy</cite>.</p>
             <header><h1>Breaking it Down - Setup</h1></header>
             
             
-            <section><p>Configuration via tasks and the <cite>env</cite> global dictionary.</p>
+            <section><p>Configuration via tasks and the <tt class="docutils literal">env</tt> global dictionary.</p>
 <pre><span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="n">env</span>
 </pre>
 <p>I set some variables I want accessible by all tasks.</p>
@@ -1682,7 +1682,7 @@ or <cite>fab stage deploy</cite>.</p>
 <span class="c">#...</span>
 </pre>
 <p>Hosts can also be specified as an argument to the fab command itself, with the
-<cite>-H</cite> option.</p></section>
+<tt class="docutils literal"><span class="pre">-H</span></tt> option.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1712,9 +1712,11 @@ or <cite>fab stage deploy</cite>.</p>
             <header><h1>Breaking it down - Packaging</h1></header>
             
             
-            <section><p>Work on the local machine gets done.</p>
-<pre><span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="n">run</span><span class="p">,</span> <span class="n">local</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">get</span>
+            <section><p>Do work on the local machine.</p>
+<pre><span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="n">local</span>
+<span class="c"># ...</span>
 </pre>
+<p><tt class="docutils literal">local</tt> runs shell commands locally, the rest is just python.</p>
 <pre><span class="k">def</span> <span class="nf">deploy</span><span class="p">():</span>
     <span class="sd">&#39;&#39;&#39;Deploys a tar file from the latest hg revision&#39;&#39;&#39;</span>
     <span class="n">hg_version</span> <span class="o">=</span> <span class="n">local</span><span class="p">(</span><span class="s">&#39;hg identify -i&#39;</span><span class="p">,</span> <span class="n">capture</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
@@ -1741,6 +1743,54 @@ or <cite>fab stage deploy</cite>.</p>
             
             <aside class="page_number">
               11/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: fabric-godber/presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Breaking it down - Remote Work</h1></header>
+            
+            
+            <section><pre><span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="n">run</span>
+<span class="kn">from</span> <span class="nn">fabric.context_managers</span> <span class="kn">import</span> <span class="n">cd</span>
+<span class="kn">from</span> <span class="nn">fabric.operations</span> <span class="kn">import</span> <span class="n">put</span><span class="p">,</span> <span class="n">sudo</span>
+<span class="kn">from</span> <span class="nn">fabric.contrib.files</span> <span class="kn">import</span> <span class="n">exists</span>
+</pre>
+<p>Remote commands <tt class="docutils literal">put</tt>, <tt class="docutils literal">cd</tt>, <tt class="docutils literal">run</tt>, <tt class="docutils literal">exists</tt>, <tt class="docutils literal">sudo</tt></p>
+<pre><span class="k">def</span> <span class="nf">deploy</span><span class="p">():</span>
+    <span class="c"># ... filepath/filename set here</span>
+    <span class="k">with</span> <span class="n">cd</span><span class="p">(</span><span class="s">&#39;/var/app&#39;</span><span class="p">):</span>
+        <span class="n">put</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s">&quot;src&quot;</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s">&#39;tar -zxf src/</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s">&#39;rm myapp-last&#39;</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s">&#39;mv myapp myapp-last&#39;</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s">&#39;ln -fs </span><span class="si">%s</span><span class="s"> myapp&#39;</span> <span class="o">%</span> <span class="n">prefix</span> <span class="p">)</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="s">&#39;myapp-cfg/local_cfg.py&#39;</span><span class="p">):</span>
+            <span class="n">run</span><span class="p">(</span><span class="s">&#39;cp myapp-cfg/local_cfg.py myapp/myapp/local_cfg.py&#39;</span><span class="p">)</span>
+        <span class="n">sudo</span><span class="p">(</span><span class="s">&#39;supervisorctl restart myapp&#39;</span><span class="p">)</span>
+    <span class="n">local</span><span class="p">(</span><span class="s">&#39;rm </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">filepath</span><span class="p">)</span>
+</pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="fabric-godber/presentation.rst">fabric-godber/presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/14
             </aside>
           </footer>
         </div>
@@ -1779,7 +1829,7 @@ or <cite>fab stage deploy</cite>.</p>
             </aside>
             
             <aside class="page_number">
-              12/14
+              13/14
             </aside>
           </footer>
         </div>
@@ -1790,7 +1840,7 @@ or <cite>fab stage deploy</cite>.</p>
         <div class="slide">
           <div class="inner">
             
-            <header><h1>In Essence</h1></header>
+            <header><h1>In Essence - Output</h1></header>
             
             
             <section><p>Run <cite>fab name</cite>:</p>
@@ -1843,35 +1893,17 @@ Disconnecting from europa.local... done.
             </aside>
             
             <aside class="page_number">
-              13/14
+              14/14
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: fabric-godber/presentation.rst -->
+      <!-- slide source:  -->
       <div class="slide-wrapper">
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Some code now</h1></header>
-            
-            
-            <section><p>Let me give you this snippet:</p>
-<pre><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
-    <span class="s">&quot;just a test&quot;</span>
-    <span class="k">print</span> <span class="n">bar</span>
-</pre>
-<p>Then this one, a more ReSTful way (haha, nerd joke spotted) using the <tt class="docutils literal">sourcecode</tt> directive:</p>
-<pre><span class="k">def</span> <span class="nf">bar</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;pretty cool&quot;&quot;&quot;</span>
-    <span class="k">print</span> <span class="n">baz</span>
-</pre>
-<p>Then this other one with the <tt class="docutils literal"><span class="pre">code-block</span></tt> directive:</p>
-<pre><span class="k">def</span> <span class="nf">batman</span><span class="p">():</span>
-    <span class="s">&quot;foobar&quot;</span>
-    <span class="k">return</span> <span class="n">robin</span>
-</pre></section>
             
           </div>
           <div class="presenter_notes">
@@ -1882,12 +1914,8 @@ Disconnecting from europa.local... done.
           </div>
           <footer>
             
-            <aside class="source">
-              Source: <a href="fabric-godber/presentation.rst">fabric-godber/presentation.rst</a>
-            </aside>
-            
             <aside class="page_number">
-              14/14
+              /14
             </aside>
           </footer>
         </div>
@@ -1968,7 +1996,7 @@ Disconnecting from europa.local... done.
       
       
       <tr id="toc-row-12">
-        <th><a href="#slide12">In Essence</a></th>
+        <th><a href="#slide12">Breaking it down - Remote Work</a></th>
         <td><a href="#slide12">12</a></td>
       </tr>
       
@@ -1980,7 +2008,7 @@ Disconnecting from europa.local... done.
       
       
       <tr id="toc-row-14">
-        <th><a href="#slide14">Some code now</a></th>
+        <th><a href="#slide14">In Essence - Output</a></th>
         <td><a href="#slide14">14</a></td>
       </tr>
       
