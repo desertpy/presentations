@@ -8,5 +8,8 @@ docutils==0.10
 ghp-import==0.2.2
 landslide==1.1.1
 paramiko==1.10.1
+pdfrw==0.1
 pycrypto==2.6
+reportlab==2.7
+rst2pdf==0.93.dev
 wsgiref==0.1.2
