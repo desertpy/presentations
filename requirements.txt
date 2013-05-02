@@ -2,11 +2,8 @@ Fabric==1.6.0
 Jinja2==2.6
 Markdown==2.3.1
 Pygments==1.6
-argparse==1.2.1
-distribute==0.6.24
 docutils==0.10
 ghp-import==0.2.2
 landslide==1.1.1
 paramiko==1.10.1
 pycrypto==2.6
-wsgiref==0.1.2
