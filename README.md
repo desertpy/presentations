@@ -4,6 +4,7 @@ DesertPy Presentations
 Presentations for the DesertPy Group are shared on this page.
 
 * [Intro to Fabric](http://desertpy.github.io/presentations/fabric-godber/index.html) - Austin Godber - 4/24/2013
+* [Python and MongoDB](http://presentations.desertpy.com/python-and-mongodb/)
 
 Creating a Presentation
 -----------------------
