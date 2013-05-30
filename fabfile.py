@@ -29,6 +29,13 @@ def build():
     # Python and MongoDB by wtolson
     local("cp -r python-and-mongodb output/")
 
+    # Python and MongoDB by wtolson
+    local("cp -r rpi-lapdock output/")
+
+    # Godber's virtualenv presentation
+    local("mkdir -p output/virtualenv-godber")
+    local("cp virtualenv-godber/virtualenv.pdf output/virtualenv-godber")
+
 def publish():
     """Publish the static content to Github Pages"""
     local("ghp-import -p output/")
