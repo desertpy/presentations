@@ -29,8 +29,32 @@ Installing with pip or apt-get::
   # or
   sudo apt-get install python-pandas
 
-Consider installing these packages as well::
+Dependencies, required, recommended and optional::
 
+  # Required
+  numpy, python-dateutil, pytx
+  # Recommended
+  numexpr, bottleneck
+  # Optional
+  cython, scipy, pytables, matplotlib, statsmodels, openpyxl
+
+Background - IPython
+--------------------
+
+IPython is a fancy python console.  Try running ``ipython`` on your command
+line.  Some IPython tips::
+
+  # Special commands, 'magic functions', begin with %
+  %quickref, %who, %run, %reset
+  # Shell Commands
+  ls, cd, pwd, mkdir
+  help(), help(obj)
+  # Tab completion of variables, attributes and methods
+
+There is a web interface to IPython, known as the IPython notebook, start it
+like this::
+
+  ipython notebook
 
 Background - NumPy
 ------------------
@@ -77,4 +101,4 @@ References
 
 .. footer::
 
-        © Austin Godber (@godber), 2010
+        © Austin Godber (@godber), 2013
