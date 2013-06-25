@@ -309,6 +309,8 @@ DataFrame
 * Columns of potentially different types
 * Operations, slicing and other behavior just like ``Series``
 
+See ``code/dataframe_ex1.py`` for python source from which the next slides were
+derived.
 
 DataFrame - Simple
 ------------------
@@ -337,19 +339,124 @@ DataFrame - Index/Column Names
   # 2013-06-28  0.761694  0.764043  0.136828  0.066216
   # 2013-06-29  0.129422  0.756846  0.931354  0.380510
 
+DataFrame - Manipulating
+------------------------
+
+See? You never need Excel again!
+
+.. code-block:: python
+
+    data2['E'] = data2['B'] + 5 * data2['C']
+    #                    A         B         C         D         E
+    # 2013-06-26  0.014781  0.929893  0.402966  0.014548  2.944723
+    # 2013-06-27  0.968832  0.015926  0.976208  0.507152  4.896967
+    # 2013-06-28  0.381733  0.916911  0.828290  0.678275  5.058361
+    # 2013-06-29  0.447551  0.066915  0.308007  0.426910  1.606950
+
+DataFrame - Column Access
+-------------------------
+
+.. code-block:: python
+
+    # Deleting a Column
+    del data2['E']
+
+    # Column Access as a dict
+    data2['B']
+    # or attribute
+    data2.B
+
+DataFrame - Row Access
+----------------------
+
+.. code-block:: python
+
+    # by row label
+    data2.loc['20130627']
+    # by integer location
+    data2.iloc[1]
+
+DataFrame - Taking a Peek
+-------------------------
+
+.. code-block:: python
+
+   data3 = pd.DataFrame(np.random.rand(400, 4))
+   data2.head()
+   #          0         1         2         3
+   # 0  0.245475  0.488223  0.624225  0.563708
+   # 1  0.237461  0.441690  0.162622  0.173519
+
+   data2.tail()
+   #          0         1         2         3
+   # 398  0.474941  0.847748  0.682227  0.871416
+   # 399  0.414240  0.819523  0.234805  0.333394
+
 Panel
 -----
 
 Like DataFrame but 3 or more dimensions.
 
+IO Tools
+--------
+
+Robust IO tools to read in data from a variety of sources
+
+* `CSV <http://pandas.pydata.org/pandas-docs/stable/io.html#io-read-csv-table>`_
+* `Clipboard <http://pandas.pydata.org/pandas-docs/stable/io.html#clipboard>`_
+* `SQL <http://pandas.pydata.org/pandas-docs/stable/io.html#sql-queries>`_
+* `Excel <http://pandas.pydata.org/pandas-docs/stable/io.html#io-excel>`_
+* `HDF <http://pandas.pydata.org/pandas-docs/stable/io.html#hdf5-pytables>`_
+
 Plotting
 --------
 
+* `Matplotlib <http://pandas.pydata.org/pandas-docs/stable/visualization.html#plotting-with-matplotlib>`_ - The standard Python plotting tool
+* `Trellis <http://pandas.pydata.org/pandas-docs/stable/rplot.html>`_ - An 'R' inspired Matplotlib based plotting tool
+
+
+Bringing it Together - Data
+---------------------------
+
+The csv file containging Phoenix weather data::
+
+  1973-01-01 00:00:00,53.1,37.9
+  1973-01-02 00:00:00,57.9,37.0
+  ...
+  2012-12-30 00:00:00,64.9,39.0
+  2012-12-31 00:00:00,55.9,41.0
+
+
+Bringing it Together - Code
+---------------------------
+
+
+.. code-block:: python
+
+    # simple readcsv
+    phxtemps1 = pd.read_csv('phx-temps.csv')
+    # define index, parse dates, name columns
+    phxtemps2 = pd.read_csv('phx-temps.csv', index_col=0,
+                            names=['highs', 'lows'],
+                            parse_dates=True)
+
+Plotting a DataFrame
+--------------------
+
+
+
+
+Alternatives
+------------
+
+* AstroPy seems to have similar data structures.
+* I suspect there are others.
 
 References
 ----------
 
 * `Pandas Documentation <http://pandas.pydata.org/pandas-docs/stable/index.html>`_
+* `Python for Data Analysis <http://www.amazon.com/Python-Data-Analysis-Wes-McKinney/dp/1449319793/>`_
 * Presentation Source - https://github.com/desertpy/presentations
 
 .. header::

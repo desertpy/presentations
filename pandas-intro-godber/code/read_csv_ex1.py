@@ -2,9 +2,9 @@
 
 import pandas as pd
 
-phxtemps = pd.read_csv('phx-temps.csv')
+phxtemps1 = pd.read_csv('phx-temps.csv')
 print "=" * 80
-print phxtemps
+print phxtemps1
 print "=" * 80
-print phxtemps.head()
+print phxtemps1.head()
 print "=" * 80
