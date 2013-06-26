@@ -418,7 +418,8 @@ Plotting
 Bringing it Together - Data
 ---------------------------
 
-The csv file containging Phoenix weather data::
+The csv file (``code/phx-temps.csv``) containing Phoenix weather data from
+GSOD::
 
   1973-01-01 00:00:00,53.1,37.9
   1973-01-02 00:00:00,57.9,37.0
@@ -440,11 +441,52 @@ Bringing it Together - Code
                             names=['highs', 'lows'],
                             parse_dates=True)
 
-Plotting a DataFrame
---------------------
+Bringing it Together - Code
+---------------------------
 
+.. code-block:: python
 
+    import matplotlib.pyplot as plt
 
+    phxtemps2 = pd.read_csv('phx-temps.csv', index_col=0,
+                            names=['highs', 'lows'],
+                            parse_dates=True)
+    phxtemps2.plot()  # pandas convenience method
+    plt.savefig('phxtemps2.png')
+
+Bringing it Together - Plot
+---------------------------
+
+.. image:: phxtemps2-all.gif
+
+Bringing it Together - Plot
+---------------------------
+
+.. image:: phxtemps2-all.gif
+
+Boo, Pandas and Friends would cry if they saw such a plot.
+
+Bringing it Together - Plot
+---------------------------
+
+.. code-block:: python
+
+  phxtemps2['20120101':'20121231'].plot()
+
+.. image:: phxtemps2-2012.gif
+
+Bringing it Together - Plot
+---------------------------
+
+.. code-block:: python
+
+    phxtemps2['diff'] = phxtemps2.highs - phxtemps2.lows
+    phxtemps2['20120101':'20121231'].plot()
+
+Bringing it Together - Plot
+---------------------------
+
+.. image:: phxtemps2-2012-diff.gif
 
 Alternatives
 ------------
