@@ -1,0 +1,2547 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+% 'BasicFonts': class PDFDictionary 
+1 0 obj
+% The standard fonts dictionary
+<< /F1 2 0 R
+ /F2 3 0 R
+ /F3 9 0 R
+ /F4 12 0 R
+ /F5 13 0 R
+ /F6 14 0 R >>
+endobj
+% 'F1': class PDFType1Font 
+2 0 obj
+% Font Helvetica
+<< /BaseFont /Helvetica
+ /Encoding /WinAnsiEncoding
+ /Name /F1
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F2': class PDFType1Font 
+3 0 obj
+% Font Helvetica-Bold
+<< /BaseFont /Helvetica-Bold
+ /Encoding /WinAnsiEncoding
+ /Name /F2
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Page1': class PDFPage 
+4 0 obj
+% Page dictionary
+<< /Contents 52 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page2': class PDFPage 
+5 0 obj
+% Page dictionary
+<< /Contents 53 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page3': class PDFPage 
+6 0 obj
+% Page dictionary
+<< /Contents 54 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page4': class PDFPage 
+7 0 obj
+% Page dictionary
+<< /Contents 55 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page5': class PDFPage 
+8 0 obj
+% Page dictionary
+<< /Contents 56 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'F3': class PDFType1Font 
+9 0 obj
+% Font Courier
+<< /BaseFont /Courier
+ /Encoding /WinAnsiEncoding
+ /Name /F3
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Page6': class PDFPage 
+10 0 obj
+% Page dictionary
+<< /Contents 57 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page7': class PDFPage 
+11 0 obj
+% Page dictionary
+<< /Contents 58 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'F4': class PDFType1Font 
+12 0 obj
+% Font Helvetica-Oblique
+<< /BaseFont /Helvetica-Oblique
+ /Encoding /WinAnsiEncoding
+ /Name /F4
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F5': class PDFType1Font 
+13 0 obj
+% Font Courier-Bold
+<< /BaseFont /Courier-Bold
+ /Encoding /WinAnsiEncoding
+ /Name /F5
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F6': class PDFType1Font 
+14 0 obj
+% Font Courier-Oblique
+<< /BaseFont /Courier-Oblique
+ /Encoding /WinAnsiEncoding
+ /Name /F6
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Page8': class PDFPage 
+15 0 obj
+% Page dictionary
+<< /Contents 59 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page9': class PDFPage 
+16 0 obj
+% Page dictionary
+<< /Contents 60 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page10': class PDFPage 
+17 0 obj
+% Page dictionary
+<< /Contents 61 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page11': class PDFPage 
+18 0 obj
+% Page dictionary
+<< /Contents 62 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page12': class PDFPage 
+19 0 obj
+% Page dictionary
+<< /Contents 63 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page13': class PDFPage 
+20 0 obj
+% Page dictionary
+<< /Contents 64 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Annot.NUMBER1': class PDFDictionary 
+21 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (https://www.wzdftpd.net/redmine/projects/nfqueue-bindings) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 43.17323
+ 189.176
+ 409.6652
+ 205.976 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER2': class PDFDictionary 
+22 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://www.secdev.org/projects/scapy/) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 94.52523
+ 166.376
+ 329.5012
+ 183.176 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER3': class PDFDictionary 
+23 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://www.netfilter.org/) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 112.4032
+ 143.576
+ 269.5252
+ 160.376 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER4': class PDFDictionary 
+24 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (https://home.regit.org/netfilter-en/using-nfqueue-and-libnetfilter_queue/) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 86.17323
+ 114.776
+ 527.2752
+ 131.576 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER5': class PDFDictionary 
+25 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://code.google.com/p/python-libnetfilter-queue/) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 86.17323
+ 66.17598
+ 397.4492
+ 82.97598 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER6': class PDFDictionary 
+26 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (https://github.com/kti/python-netfilterqueue) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 86.17323
+ 26.57598
+ 384.9669
+ 43.37598 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Page14': class PDFPage 
+27 0 obj
+% Page dictionary
+<< /Annots [ 21 0 R
+ 22 0 R
+ 23 0 R
+ 24 0 R
+ 25 0 R
+ 26 0 R ]
+ /Contents 65 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page15': class PDFPage 
+28 0 obj
+% Page dictionary
+<< /Contents 66 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Annot.NUMBER7': class PDFDictionary 
+29 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (mailto:erik@orvant.com) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 86.17323
+ 177.176
+ 419.1969
+ 193.976 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER8': class PDFDictionary 
+30 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (https://github.com/orvant/orvant-snitch) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 86.17323
+ 128.576
+ 419.1969
+ 145.376 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER9': class PDFDictionary 
+31 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (https://www.orvant.com) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 86.17323
+ 79.97598
+ 419.1969
+ 96.77598 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Page16': class PDFPage 
+32 0 obj
+% Page dictionary
+<< /Annots [ 29 0 R
+ 30 0 R
+ 31 0 R ]
+ /Contents 67 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Annot.NUMBER10': class PDFDictionary 
+33 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (https://github.com/invernizzi/scapy-http) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 111.2126
+ 205.2295
+ 352.4186
+ 222.0295 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Page17': class PDFPage 
+34 0 obj
+% Page dictionary
+<< /Annots [ 33 0 R ]
+ /Contents 68 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 283.4646 ]
+ /Parent 51 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'R35': class PDFCatalog 
+35 0 obj
+% Document Root
+<< /Outlines 37 0 R
+ /PageLabels 69 0 R
+ /PageMode /UseNone
+ /Pages 51 0 R
+ /Type /Catalog >>
+endobj
+% 'R36': class PDFInfo 
+36 0 obj
+<< /Author ()
+ /CreationDate (D:20131103073401+07'00')
+ /Creator (\(unspecified\))
+ /Keywords ()
+ /Producer (ReportLab PDF Library - www.reportlab.com)
+ /Subject (\(unspecified\))
+ /Title () >>
+endobj
+% 'R37': class PDFOutlines 
+37 0 obj
+<< /Count 14
+ /First 38 0 R
+ /Last 50 0 R
+ /Type /Outlines >>
+endobj
+% 'Outline.0': class OutlineEntryObject 
+38 0 obj
+<< /Dest [ 4 0 R
+ /XYZ
+ 20.17323
+ 266.126
+ 0 ]
+ /Next 39 0 R
+ /Parent 37 0 R
+ /Title (Packet Inspection Using Python) >>
+endobj
+% 'Outline.1': class OutlineEntryObject 
+39 0 obj
+<< /Dest [ 6 0 R
+ /XYZ
+ 20.17323
+ 266.126
+ 0 ]
+ /Next 40 0 R
+ /Parent 37 0 R
+ /Prev 38 0 R
+ /Title (Why?) >>
+endobj
+% 'Outline.2': class OutlineEntryObject 
+40 0 obj
+<< /Count 3
+ /Dest [ 8 0 R
+ /XYZ
+ 20.17323
+ 266.126
+ 0 ]
+ /First 41 0 R
+ /Last 43 0 R
+ /Next 44 0 R
+ /Parent 37 0 R
+ /Prev 39 0 R
+ /Title (Primary Building Blocks) >>
+endobj
+% 'Outline.14.0': class OutlineEntryObject 
+41 0 obj
+<< /Dest [ 8 0 R
+ /XYZ
+ 20.17323
+ 224.726
+ 0 ]
+ /Next 42 0 R
+ /Parent 40 0 R
+ /Title (iptables) >>
+endobj
+% 'Outline.14.1': class OutlineEntryObject 
+42 0 obj
+<< /Dest [ 8 0 R
+ /XYZ
+ 20.17323
+ 164.726
+ 0 ]
+ /Next 43 0 R
+ /Parent 40 0 R
+ /Prev 41 0 R
+ /Title (nfqueue) >>
+endobj
+% 'Outline.14.2': class OutlineEntryObject 
+43 0 obj
+<< /Dest [ 8 0 R
+ /XYZ
+ 20.17323
+ 104.726
+ 0 ]
+ /Parent 40 0 R
+ /Prev 42 0 R
+ /Title (scapy) >>
+endobj
+% 'Outline.3': class OutlineEntryObject 
+44 0 obj
+<< /Dest [ 10 0 R
+ /XYZ
+ 20.17323
+ 266.126
+ 0 ]
+ /Next 45 0 R
+ /Parent 37 0 R
+ /Prev 40 0 R
+ /Title (iptables) >>
+endobj
+% 'Outline.4': class OutlineEntryObject 
+45 0 obj
+<< /Dest [ 15 0 R
+ /XYZ
+ 20.17323
+ 266.126
+ 0 ]
+ /Next 46 0 R
+ /Parent 37 0 R
+ /Prev 44 0 R
+ /Title (nfqueue) >>
+endobj
+% 'Outline.5': class OutlineEntryObject 
+46 0 obj
+<< /Dest [ 17 0 R
+ /XYZ
+ 20.17323
+ 266.126
+ 0 ]
+ /Next 47 0 R
+ /Parent 37 0 R
+ /Prev 45 0 R
+ /Title (scapy) >>
+endobj
+% 'Outline.6': class OutlineEntryObject 
+47 0 obj
+<< /Dest [ 18 0 R
+ /XYZ
+ 20.17323
+ 266.126
+ 0 ]
+ /Next 48 0 R
+ /Parent 37 0 R
+ /Prev 46 0 R
+ /Title (orvant-snitch) >>
+endobj
+% 'Outline.7': class OutlineEntryObject 
+48 0 obj
+<< /Dest [ 20 0 R
+ /XYZ
+ 20.17323
+ 266.126
+ 0 ]
+ /Next 49 0 R
+ /Parent 37 0 R
+ /Prev 47 0 R
+ /Title (Some Caveats) >>
+endobj
+% 'Outline.8': class OutlineEntryObject 
+49 0 obj
+<< /Dest [ 27 0 R
+ /XYZ
+ 20.17323
+ 266.126
+ 0 ]
+ /Next 50 0 R
+ /Parent 37 0 R
+ /Prev 48 0 R
+ /Title (Some References) >>
+endobj
+% 'Outline.9': class OutlineEntryObject 
+50 0 obj
+<< /Dest [ 32 0 R
+ /XYZ
+ 20.17323
+ 266.126
+ 0 ]
+ /Parent 37 0 R
+ /Prev 49 0 R
+ /Title (Thank You!) >>
+endobj
+% 'R51': class PDFPages 
+51 0 obj
+% page tree
+<< /Count 17
+ /Kids [ 4 0 R
+ 5 0 R
+ 6 0 R
+ 7 0 R
+ 8 0 R
+ 10 0 R
+ 11 0 R
+ 15 0 R
+ 16 0 R
+ 17 0 R
+ 18 0 R
+ 19 0 R
+ 20 0 R
+ 27 0 R
+ 28 0 R
+ 32 0 R
+ 34 0 R ]
+ /Type /Pages >>
+endobj
+% 'R52': class PDFStream 
+52 0 obj
+% page stream
+<< /Length 212 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 236.726 cm
+q
+BT 1 0 0 1 0 4.9 Tm 29.4 TL /F2 24.5 Tf 0 0 0 rg (Packet Inspection Using Python) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 230.726 cm
+Q
+ 
+endstream
+endobj
+% 'R53': class PDFStream 
+53 0 obj
+% page stream
+<< /Length 154 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 237.7795 cm
+n 0 14.17323 m 399.0236 14.17323 l S
+Q
+q
+1 0 0 1 20.17323 237.7795 cm
+Q
+ 
+endstream
+endobj
+% 'R54': class PDFStream 
+54 0 obj
+% page stream
+<< /Length 2017 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 236.726 cm
+q
+BT 1 0 0 1 0 4.9 Tm 29.4 TL /F2 24.5 Tf 0 0 0 rg (Why?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 224.726 cm
+Q
+q
+1 0 0 1 20.17323 224.726 cm
+Q
+q
+1 0 0 1 20.17323 191.126 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 13.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 19.6 Tm /F1 14 Tf 16.8 TL .125703 Tw (Access to low-level kernel packet processing via a high-level) Tj T* 0 Tw (API.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 185.126 cm
+Q
+q
+1 0 0 1 20.17323 168.326 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2.8 Tm 16.8 TL /F1 14 Tf 0 0 0 rg (Excellent for quick experiments & prototypes.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 162.326 cm
+Q
+q
+1 0 0 1 20.17323 26.72598 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 115.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 99 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 19.6 Tm /F1 14 Tf 16.8 TL .804703 Tw (Can implement features not easy to implement with existing) Tj T* 0 Tw (tooling:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 93 cm
+Q
+q
+1 0 0 1 23 -3 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 62.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 19.6 Tm /F1 14 Tf 16.8 TL 2.838517 Tw (Log specific packets or connection attempts for further) Tj T* 0 Tw (analysis.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 39.6 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL (Identify overly chatty programs.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 19.6 Tm /F1 14 Tf 16.8 TL 4.836517 Tw (Develop an outbound firewall to help protect against) Tj T* 0 Tw (trojans.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 26.72598 cm
+Q
+ 
+endstream
+endobj
+% 'R55': class PDFStream 
+55 0 obj
+% page stream
+<< /Length 154 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 237.7795 cm
+n 0 14.17323 m 399.0236 14.17323 l S
+Q
+q
+1 0 0 1 20.17323 237.7795 cm
+Q
+ 
+endstream
+endobj
+% 'R56': class PDFStream 
+56 0 obj
+% page stream
+<< /Length 1014 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 236.726 cm
+q
+BT 1 0 0 1 0 4.9 Tm 29.4 TL /F2 24.5 Tf 0 0 0 rg (Primary Building Blocks) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 199.526 cm
+q
+BT 1 0 0 1 0 4.2 Tm 25.2 TL /F2 21 Tf 0 0 0 rg (iptables) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 176.726 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL (Direct packets to a netfilter queue) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 139.526 cm
+q
+BT 1 0 0 1 0 4.2 Tm 25.2 TL /F2 21 Tf 0 0 0 rg (nfqueue) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 116.726 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL (Hook your program into a netfilter queue.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 79.52598 cm
+q
+BT 1 0 0 1 0 4.2 Tm 25.2 TL /F2 21 Tf 0 0 0 rg (scapy) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 56.72598 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL (Intuitive packet inspection) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 28.37953 cm
+n 0 14.17323 m 399.0236 14.17323 l S
+Q
+q
+1 0 0 1 20.17323 28.37953 cm
+Q
+ 
+endstream
+endobj
+% 'R57': class PDFStream 
+57 0 obj
+% page stream
+<< /Length 2678 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 236.726 cm
+q
+BT 1 0 0 1 0 4.9 Tm 29.4 TL /F2 24.5 Tf 0 0 0 rg (iptables) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 197.126 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 19.6 Tm /F1 14 Tf 16.8 TL .524562 Tw (Need to send packets to the netfilter queue using iptables. Start) Tj T* 0 Tw (with simple rules to minimize negative impacts to your network.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 191.126 cm
+Q
+q
+1 0 0 1 20.17323 191.126 cm
+Q
+q
+1 0 0 1 20.17323 174.326 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL (Only outbound packets to a specific address:) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 174.326 cm
+Q
+q
+1 0 0 1 20.17323 145.5435 cm
+q
+q
+.692749 0 0 .692749 0 0 cm
+q
+1 0 0 1 6.6 9.527256 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 574.8 28.8 re B*
+Q
+q
+.960784 .960784 .862745 rg
+n 0 1.05 16.8 16.8 re f*
+BT 1 0 0 1 0 2.8 Tm 16.8 TL /F3 14 Tf .098039 .090196 .486275 rg ($ ) Tj 0 0 0 rg (iptables -A OUTPUT --dst www.orvant.com -j NFQUEUE --queue-bypass) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 20.17323 131.5435 cm
+Q
+q
+1 0 0 1 20.17323 131.5435 cm
+Q
+q
+1 0 0 1 20.17323 97.9435 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 13.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 19.6 Tm .69566 Tw 16.8 TL /F1 14 Tf 0 0 0 rg (Only initial packets of outbound connections. Otherwise, will) Tj T* 0 Tw (process & log all the packets for a connection:) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 97.9435 cm
+Q
+q
+1 0 0 1 20.17323 69.16102 cm
+q
+q
+.692749 0 0 .692749 0 0 cm
+q
+1 0 0 1 6.6 9.527256 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 574.8 28.8 re B*
+Q
+q
+.960784 .960784 .862745 rg
+n 0 1.05 16.8 16.8 re f*
+BT 1 0 0 1 0 2.8 Tm 16.8 TL /F3 14 Tf .098039 .090196 .486275 rg ($ ) Tj 0 0 0 rg (iptables -A OUTPUT -m state --state NEW -j NFQUEUE --queue-bypass) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 20.17323 55.16102 cm
+Q
+q
+1 0 0 1 20.17323 55.16102 cm
+Q
+q
+1 0 0 1 20.17323 21.56102 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 13.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 19.6 Tm /F1 14 Tf 16.8 TL 6.36366 Tw (Send packets to specific queues, allowing for multiple) Tj T* 0 Tw (processes:) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 21.56102 cm
+Q
+ 
+endstream
+endobj
+% 'R58': class PDFStream 
+58 0 obj
+% page stream
+<< /Length 730 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 230.0194 cm
+q
+q
+.771507 0 0 .771507 0 0 cm
+q
+1 0 0 1 6.6 8.554682 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 516 45.6 re B*
+Q
+q
+.960784 .960784 .862745 rg
+n 0 17.85 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 1.05 16.8 16.8 re f*
+BT 1 0 0 1 0 19.6 Tm 16.8 TL /F3 14 Tf .098039 .090196 .486275 rg ($ ) Tj 0 0 0 rg (iptables -A INPUT -j NFQUEUE --queue-bypass --queue-num 0) Tj T* .098039 .090196 .486275 rg ($ ) Tj 0 0 0 rg (iptables -A OUTPUT -j NFQUEUE --queue-bypass --queue-num 1) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 20.17323 193.673 cm
+n 0 14.17323 m 399.0236 14.17323 l S
+Q
+q
+1 0 0 1 20.17323 193.673 cm
+Q
+ 
+endstream
+endobj
+% 'R59': class PDFStream 
+59 0 obj
+% page stream
+<< /Length 6023 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 236.726 cm
+q
+BT 1 0 0 1 0 4.9 Tm 29.4 TL /F2 24.5 Tf 0 0 0 rg (nfqueue) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 213.926 cm
+q
+BT 1 0 0 1 0 2.8 Tm 16.8 TL /F1 14 Tf 0 0 0 rg (Python bindings to ) Tj /F4 14 Tf (libnetfilter_queue) Tj /F1 14 Tf (. Example "Hello, world!":) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 62.48612 cm
+q
+q
+.724444 0 0 .724444 0 0 cm
+q
+1 0 0 1 6.6 9.110438 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 457.2 196.8 re B*
+Q
+q
+.960784 .960784 .862745 rg
+n 0 169.05 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 58.8 169.05 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 109.2 169.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 126 169.05 58.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 184.8 169.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 201.6 169.05 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 135.45 25.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 33.6 135.45 58.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 92.4 135.45 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 100.8 135.45 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 151.2 135.45 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 302.4 135.45 142.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 33.6 118.65 42 16.8 re f*
+.960784 .960784 .862745 rg
+n 75.6 118.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 84 118.65 134.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 218.4 118.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 33.6 101.85 42 16.8 re f*
+.960784 .960784 .862745 rg
+n 75.6 101.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 84 101.85 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 134.4 101.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 142.8 101.85 67.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 210 101.85 25.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 33.6 85.05 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 84 85.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 92.4 85.05 92.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 184.8 85.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 193.2 85.05 58.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 252 85.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 260.4 85.05 75.6 16.8 re f*
+.960784 .960784 .862745 rg
+n 336 85.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 51.45 25.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 33.6 51.45 67.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 100.8 51.45 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 109.2 51.45 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 117.6 51.45 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 302.4 51.45 134.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 33.6 34.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 42 34.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 50.4 34.65 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 100.8 34.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 109.2 34.65 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 159.6 34.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 168 34.65 58.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 226.8 34.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 33.6 17.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 42 17.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 50.4 17.85 42 16.8 re f*
+.960784 .960784 .862745 rg
+n 92.4 17.85 16.8 16.8 re f*
+BT 1 0 0 1 0 170.8 Tm 16.8 TL /F5 14 Tf 0 .501961 0 rg (import) Tj /F3 14 Tf 0 0 0 rg ( ) Tj /F5 14 Tf 0 0 1 rg (socket) Tj /F3 14 Tf .4 .4 .4 rg (,) Tj 0 0 0 rg ( ) Tj /F5 14 Tf 0 0 1 rg (nfqueue) Tj /F3 14 Tf .4 .4 .4 rg (,) Tj 0 0 0 rg ( ) Tj /F5 14 Tf 0 0 1 rg (atexit) Tj /F3 14 Tf 0 0 0 rg  T*  T* /F5 14 Tf 0 .501961 0 rg (def) Tj /F3 14 Tf 0 0 0 rg ( ) Tj 0 0 1 rg (process) Tj 0 0 0 rg (\() Tj (packet) Tj (\):) Tj (                ) Tj /F6 14 Tf .25098 .501961 .501961 rg (# callback method) Tj /F3 14 Tf 0 0 0 rg  T* (    ) Tj /F5 14 Tf 0 .501961 0 rg (print) Tj /F3 14 Tf 0 0 0 rg (\() Tj .729412 .129412 .129412 rg ("Hello, packet!") Tj 0 0 0 rg (\)) Tj  T* (    ) Tj /F5 14 Tf 0 .501961 0 rg (print) Tj /F3 14 Tf 0 0 0 rg (\() Tj (packet) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (get_data) Tj (\(\)\)) Tj  T* (    ) Tj (packet) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (set_verdict) Tj (\() Tj (nfqueue) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (NF_ACCEPT) Tj (\)) Tj  T*  T* /F5 14 Tf 0 .501961 0 rg (def) Tj /F3 14 Tf 0 0 0 rg ( ) Tj 0 0 1 rg (shutdown) Tj 0 0 0 rg (\() Tj (q) Tj (\):) Tj (                    ) Tj /F6 14 Tf .25098 .501961 .501961 rg (# cleanup method) Tj /F3 14 Tf 0 0 0 rg  T* (    ) Tj (q) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (unbind) Tj (\() Tj (socket) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (AF_INET) Tj (\)) Tj  T* (    ) Tj (q) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (close) Tj (\(\)) Tj  T*  T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 20.17323 20.58215 cm
+q
+q
+.724444 0 0 .724444 0 0 cm
+q
+1 0 0 1 6.6 9.110438 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 474 45.6 re B*
+Q
+q
+.960784 .960784 .862745 rg
+n 0 17.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 16.8 17.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 33.6 17.85 58.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 92.4 17.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 100.8 17.85 42 16.8 re f*
+.960784 .960784 .862745 rg
+n 142.8 17.85 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 1.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 8.4 1.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 16.8 1.05 100.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 117.6 1.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 126 1.05 58.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 184.8 1.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 302.4 1.05 159.6 16.8 re f*
+BT 1 0 0 1 0 19.6 Tm 16.8 TL /F3 14 Tf 0 0 0 rg (q) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj (nfqueue) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (queue) Tj (\(\)) Tj  T* (q) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (set_callback) Tj (\() Tj (process) Tj (\)) Tj (             ) Tj /F6 14 Tf .25098 .501961 .501961 rg (# register callback) Tj /F3 14 Tf 0 0 0 rg  T* ET
+Q
+Q
+Q
+Q
+Q
+ 
+endstream
+endobj
+% 'R60': class PDFStream 
+60 0 obj
+% page stream
+<< /Length 2470 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 220.0514 cm
+q
+q
+.724444 0 0 .724444 0 0 cm
+q
+1 0 0 1 6.6 9.110438 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 549.6 62.4 re B*
+Q
+q
+.960784 .960784 .862745 rg
+n 0 34.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 8.4 34.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 16.8 34.65 75.6 16.8 re f*
+.960784 .960784 .862745 rg
+n 92.4 34.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 100.8 34.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 109.2 34.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 126 34.65 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 176.4 34.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 184.8 34.65 58.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 243.6 34.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 302.4 34.65 142.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 17.85 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 50.4 17.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 58.8 17.85 67.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 126 17.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 134.4 17.85 67.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 201.6 17.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 218.4 17.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 226.8 17.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 302.4 17.85 193.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 1.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 8.4 1.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 16.8 1.05 58.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 75.6 1.05 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 302.4 1.05 235.2 16.8 re f*
+BT 1 0 0 1 0 36.4 Tm 16.8 TL /F3 14 Tf 0 0 0 rg (q) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (fast_open) Tj (\() Tj .4 .4 .4 rg (0) Tj 0 0 0 rg (,) Tj ( ) Tj (socket) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (AF_INET) Tj (\)) Tj (      ) Tj /F6 14 Tf .25098 .501961 .501961 rg (# bind to queue 0) Tj /F3 14 Tf 0 0 0 rg  T* (atexit) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (register) Tj (\() Tj (shutdown) Tj (,) Tj ( ) Tj (q) Tj (\)) Tj (        ) Tj /F6 14 Tf .25098 .501961 .501961 rg (# make sure to clean up) Tj /F3 14 Tf 0 0 0 rg  T* (q) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (try_run) Tj (\(\)) Tj (                         ) Tj /F6 14 Tf .25098 .501961 .501961 rg (# start processing the queue) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 20.17323 183.7049 cm
+n 0 14.17323 m 399.0236 14.17323 l S
+Q
+q
+1 0 0 1 20.17323 183.7049 cm
+Q
+ 
+endstream
+endobj
+% 'R61': class PDFStream 
+61 0 obj
+% page stream
+<< /Length 5874 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 236.726 cm
+q
+BT 1 0 0 1 0 4.9 Tm 29.4 TL /F2 24.5 Tf 0 0 0 rg (scapy) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 197.126 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 19.6 Tm /F1 14 Tf 16.8 TL 1.696362 Tw (The Scapy library is a good option for inspecting packets \(see) Tj T* 0 Tw (dpkt or impacket for alternatives\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 43.46471 cm
+q
+q
+.735663 0 0 .735663 0 0 cm
+q
+1 0 0 1 6.6 8.971499 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 541.2 196.8 re B*
+Q
+q
+.960784 .960784 .862745 rg
+n 0 169.05 33.6 16.8 re f*
+.960784 .960784 .862745 rg
+n 42 169.05 75.6 16.8 re f*
+.960784 .960784 .862745 rg
+n 126 169.05 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 184.8 169.05 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 201.6 169.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 218.4 169.05 25.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 243.6 169.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 260.4 169.05 25.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 285.6 169.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 302.4 169.05 25.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 135.45 336 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 118.65 33.6 16.8 re f*
+.960784 .960784 .862745 rg
+n 42 118.65 33.6 16.8 re f*
+.960784 .960784 .862745 rg
+n 84 118.65 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 142.8 118.65 92.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 85.05 25.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 33.6 85.05 134.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 168 85.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 176.4 85.05 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 226.8 85.05 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 302.4 85.05 184.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 33.6 68.25 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 84 68.25 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 92.4 68.25 92.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 184.8 68.25 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 193.2 68.25 58.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 252 68.25 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 260.4 68.25 75.6 16.8 re f*
+.960784 .960784 .862745 rg
+n 336 68.25 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 33.6 51.45 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 58.8 51.45 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 75.6 51.45 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 92.4 51.45 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 100.8 51.45 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 151.2 51.45 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 159.6 51.45 67.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 226.8 51.45 25.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 33.6 34.65 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 58.8 34.65 92.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 159.6 34.65 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 184.8 34.65 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 201.6 34.65 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 302.4 34.65 226.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 67.2 17.85 58.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 134.4 17.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 151.2 17.85 25.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 176.4 17.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 184.8 17.85 92.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 277.2 17.85 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 302.4 17.85 184.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 67.2 1.05 42 16.8 re f*
+.960784 .960784 .862745 rg
+n 109.2 1.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 117.6 1.05 58.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 176.4 1.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 193.2 1.05 58.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 252 1.05 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 260.4 1.05 33.6 16.8 re f*
+.960784 .960784 .862745 rg
+n 294 1.05 8.4 16.8 re f*
+BT 1 0 0 1 0 170.8 Tm 16.8 TL /F5 14 Tf 0 .501961 0 rg (from) Tj /F3 14 Tf 0 0 0 rg ( ) Tj /F5 14 Tf 0 0 1 rg (scapy.all) Tj /F3 14 Tf 0 0 0 rg ( ) Tj /F5 14 Tf 0 .501961 0 rg (import) Tj /F3 14 Tf 0 0 0 rg ( ) Tj (IP) Tj (,) Tj ( ) Tj (TCP) Tj (,) Tj ( ) Tj (UDP) Tj (,) Tj ( ) Tj (Raw) Tj  T*  T* /F6 14 Tf .25098 .501961 .501961 rg (# Easy to add new protocols to scapy [1]) Tj /F3 14 Tf 0 0 0 rg  T* /F5 14 Tf 0 .501961 0 rg (from) Tj /F3 14 Tf 0 0 0 rg ( ) Tj /F5 14 Tf 0 0 1 rg (HTTP) Tj /F3 14 Tf 0 0 0 rg ( ) Tj /F5 14 Tf 0 .501961 0 rg (import) Tj /F3 14 Tf 0 0 0 rg ( ) Tj (HTTPRequest) Tj  T*  T* /F5 14 Tf 0 .501961 0 rg (def) Tj /F3 14 Tf 0 0 0 rg ( ) Tj 0 0 1 rg (log_http_domains) Tj 0 0 0 rg (\() Tj (packet) Tj (\):) Tj (       ) Tj /F6 14 Tf .25098 .501961 .501961 rg (# our nfqueue callback) Tj /F3 14 Tf 0 0 0 rg  T* (    ) Tj (packet) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (set_verdict) Tj (\() Tj (nfqueue) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (NF_ACCEPT) Tj (\)) Tj  T* (    ) Tj (ip) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj (IP) Tj (\() Tj (packet) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (get_data) Tj (\(\)\)) Tj  T* (    ) Tj /F5 14 Tf 0 .501961 0 rg (if) Tj /F3 14 Tf 0 0 0 rg ( ) Tj (HTTPRequest) Tj ( ) Tj /F5 14 Tf .666667 .133333 1 rg (in) Tj /F3 14 Tf 0 0 0 rg ( ) Tj (ip) Tj (:) Tj (           ) Tj /F6 14 Tf .25098 .501961 .501961 rg (# only HTTP request packets) Tj /F3 14 Tf 0 0 0 rg  T* (        ) Tj (request) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj (pkt) Tj ([) Tj (HTTPRequest) Tj (]) Tj (  ) Tj /F6 14 Tf .25098 .501961 .501961 rg (# how to access layers) Tj /F3 14 Tf 0 0 0 rg  T* (        ) Tj /F5 14 Tf 0 .501961 0 rg (print) Tj /F3 14 Tf 0 0 0 rg (\() Tj .729412 .129412 .129412 rg ("HOST:") Tj 0 0 0 rg (,) Tj ( ) Tj (request) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (Host) Tj (\)) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 20.17323 7.11825 cm
+n 0 14.17323 m 399.0236 14.17323 l S
+Q
+q
+1 0 0 1 20.17323 7.11825 cm
+Q
+ 
+endstream
+endobj
+% 'R62': class PDFStream 
+62 0 obj
+% page stream
+<< /Length 1846 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 236.726 cm
+q
+BT 1 0 0 1 0 4.9 Tm 29.4 TL /F2 24.5 Tf 0 0 0 rg (orvant-snitch) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 180.326 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 36.4 Tm /F1 14 Tf 16.8 TL .058147 Tw (Inspired by Little Snitch for OSX. Is a small, headless version for) Tj T* 0 Tw .385291 Tw (Linux machines. Useful to answer questions like: "What traffic is) Tj T* 0 Tw (program X causing?") Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 7.925984 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 397.8236 163.2 re B*
+Q
+q
+.960784 .960784 .862745 rg
+n 0 135.45 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 352.8 135.45 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 101.85 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 92.4 51.45 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 151.2 51.45 33.6 16.8 re f*
+.960784 .960784 .862745 rg
+n 184.8 51.45 8.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 17.85 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 1.05 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 210 1.05 8.4 16.8 re f*
+BT 1 0 0 1 0 137.2 Tm 16.8 TL /F3 14 Tf .098039 .090196 .486275 rg ($ ) Tj 0 0 0 rg (iptables -A OUTPUT -m state --state NEW ) Tj /F5 14 Tf .733333 .4 .133333 rg (\\) Tj T* /F3 14 Tf 0 0 0 rg (    -j NFQUEUE --queue-bypass --queue-num 1) Tj T* .098039 .090196 .486275 rg ($ ) Tj 0 0 0 rg (cat /etc/ov-snitch.conf) Tj T* (  rules:) Tj T* (    /usr/bin/curl:) Tj T* (      443: ) Tj .4 .4 .4 rg ({) Tj 0 0 0 rg (deny: ) Tj 0 .501961 0 rg (true) Tj .4 .4 .4 rg (}) Tj 0 0 0 rg  T* (  queue: 1) Tj T* .098039 .090196 .486275 rg ($ ) Tj 0 0 0 rg (ov-snitch) Tj T* .098039 .090196 .486275 rg ($ ) Tj 0 0 0 rg (tail /var/log/syslog | ) Tj /F5 14 Tf .733333 .4 .133333 rg (\\) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+ 
+endstream
+endobj
+% 'R63': class PDFStream 
+63 0 obj
+% page stream
+<< /Length 1658 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 150.3715 cm
+q
+q
+.784245 0 0 .784245 0 0 cm
+q
+1 0 0 1 6.6 8.415742 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 507.6 146.4 re B*
+Q
+q
+.960784 .960784 .862745 rg
+n 92.4 118.65 67.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 168 118.65 159.6 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 101.85 302.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 85.05 411.6 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 68.25 50.4 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 51.45 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 193.2 51.45 193.2 16.8 re f*
+.960784 .960784 .862745 rg
+n 0 17.85 16.8 16.8 re f*
+.960784 .960784 .862745 rg
+n 193.2 17.85 201.6 16.8 re f*
+BT 1 0 0 1 0 120.4 Tm 16.8 TL /F3 14 Tf 0 0 0 rg (    awk -F ) Tj .729412 .129412 .129412 rg ('[ :|]+') Tj 0 0 0 rg ( ) Tj .729412 .129412 .129412 rg ('$0 ~ "ov-snitch" {) Tj T* (      printf\("%-10s %15s:%-5s %s\\n",) Tj T* (             $\(NF-8\), $\(NF-3\), $\(NF-2\), $\(NF-1\)\);) Tj T* (    }') Tj 0 0 0 rg ( ) Tj (&) Tj  T* .098039 .090196 .486275 rg ($ ) Tj 0 0 0 rg (curl --max-time 1 -I ) Tj .729412 .129412 .129412 rg ('http://www.orvant.com') Tj 0 0 0 rg ( ) Tj (>) Tj ( /dev/null) Tj T* (  allowed    69.160.46.73:80    /usr/bin/curl) Tj T* .098039 .090196 .486275 rg ($ ) Tj 0 0 0 rg (curl --max-time 1 -I ) Tj .729412 .129412 .129412 rg ('https://www.orvant.com') Tj 0 0 0 rg ( ) Tj (>) Tj ( /dev/null) Tj T* (  denied     69.160.46.73:443   /usr/bin/curl) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 20.17323 114.025 cm
+n 0 14.17323 m 399.0236 14.17323 l S
+Q
+q
+1 0 0 1 20.17323 114.025 cm
+Q
+ 
+endstream
+endobj
+% 'R64': class PDFStream 
+64 0 obj
+% page stream
+<< /Length 1797 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 236.726 cm
+q
+BT 1 0 0 1 0 4.9 Tm 29.4 TL /F2 24.5 Tf 0 0 0 rg (Some Caveats) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 224.726 cm
+Q
+q
+1 0 0 1 20.17323 224.726 cm
+Q
+q
+1 0 0 1 20.17323 174.326 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 30.6 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 36.4 Tm 8.92166 Tw 16.8 TL /F1 14 Tf 0 0 0 rg (Make sure to use ) Tj /F4 14 Tf (--queue-bypass ) Tj /F1 14 Tf (in iptables rules.) Tj T* 0 Tw 2.445069 Tw (Otherwise, packets will hang if there is no active program) Tj T* 0 Tw (processing the queue.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 168.326 cm
+Q
+q
+1 0 0 1 20.17323 151.526 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL (These libraries are getting stale.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 145.526 cm
+Q
+q
+1 0 0 1 20.17323 78.32598 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 47.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 53.2 Tm /F1 14 Tf 16.8 TL .173362 Tw (Working at the packet level. Easy to mess up the connection) Tj T* 0 Tw 2.419238 Tw (if you want to mangle a packet \(e.g. alter the payload, IP) Tj T* 0 Tw 8.92366 Tw (address, or port\). Have to worry about checksums,) Tj T* 0 Tw (sequence numbers, etc.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 78.32598 cm
+Q
+q
+1 0 0 1 20.17323 49.97953 cm
+n 0 14.17323 m 399.0236 14.17323 l S
+Q
+q
+1 0 0 1 20.17323 49.97953 cm
+Q
+ 
+endstream
+endobj
+% 'R65': class PDFStream 
+65 0 obj
+% page stream
+<< /Length 3232 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 236.726 cm
+q
+BT 1 0 0 1 0 4.9 Tm 29.4 TL /F2 24.5 Tf 0 0 0 rg (Some References) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 224.726 cm
+Q
+q
+1 0 0 1 20.17323 224.726 cm
+Q
+q
+1 0 0 1 20.17323 191.126 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 13.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 19.6 Tm 124.5988 Tw 16.8 TL /F1 14 Tf 0 0 0 rg (NFQueue Bindings -) Tj T* 0 Tw 0 0 .501961 rg (https://www.wzdftpd.net/redmine/projects/nfqueue-bindings) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 185.126 cm
+Q
+q
+1 0 0 1 20.17323 168.326 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2.8 Tm 16.8 TL /F1 14 Tf 0 0 0 rg (Scapy - ) Tj 0 0 .501961 rg (http://www.secdev.org/projects/scapy/) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 162.326 cm
+Q
+q
+1 0 0 1 20.17323 119.726 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 22.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 22.8 cm
+q
+BT 1 0 0 1 0 2.8 Tm 16.8 TL /F2 14 Tf 0 0 0 rg (NetFilter - ) Tj 0 0 .501961 rg (http://www.netfilter.org/) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 12.8 Tm  T* ET
+q
+1 0 0 1 20 16.8 cm
+Q
+q
+1 0 0 1 20 16.8 cm
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 .501961 rg
+0 0 .501961 RG
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL (https://home.regit.org/netfilter-en/using-nfqueue-and-libnetfilter_queue/) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 113.726 cm
+Q
+q
+1 0 0 1 20.17323 14.72598 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 79.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 79.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F2 14 Tf 16.8 TL (Alternatives to nfqueue-bindings:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 69.2 Tm  T* ET
+q
+1 0 0 1 20 73.2 cm
+Q
+q
+1 0 0 1 20 73.2 cm
+Q
+q
+1 0 0 1 20 39.6 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 13.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 19.6 Tm 16.8 TL /F1 14 Tf 0 0 .501961 rg (http://code.google.com/p/python-libnetfilter-queue/) Tj T* 0 0 0 rg (\(uses ctypes\)) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 33.6 cm
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 13.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 19.6 Tm 31.09962 Tw 16.8 TL /F1 14 Tf 0 0 .501961 rg (https://github.com/kti/python-netfilterqueue ) Tj 0 0 0 rg (\(uses) Tj T* 0 Tw (cython, in pypi\)) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 14.72598 cm
+Q
+ 
+endstream
+endobj
+% 'R66': class PDFStream 
+66 0 obj
+% page stream
+<< /Length 154 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 237.7795 cm
+n 0 14.17323 m 399.0236 14.17323 l S
+Q
+q
+1 0 0 1 20.17323 237.7795 cm
+Q
+ 
+endstream
+endobj
+% 'R67': class PDFStream 
+67 0 obj
+% page stream
+<< /Length 2727 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 236.726 cm
+q
+BT 1 0 0 1 0 4.9 Tm 29.4 TL /F2 24.5 Tf 0 0 0 rg (Thank You!) Tj T* ET
+Q
+Q
+q
+1 0 0 1 20.17323 224.726 cm
+Q
+q
+1 0 0 1 20.17323 224.726 cm
+Q
+q
+1 0 0 1 20.17323 182.126 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 22.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 22.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F2 14 Tf 16.8 TL (Erik Stephens) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 12.8 Tm  T* ET
+q
+1 0 0 1 20 16.8 cm
+Q
+q
+1 0 0 1 20 16.8 cm
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 .501961 rg
+0 0 .501961 RG
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL (erik@orvant.com) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 176.126 cm
+Q
+q
+1 0 0 1 20.17323 133.526 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 22.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 22.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F2 14 Tf 16.8 TL (code for orvant-snitch:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 12.8 Tm  T* ET
+q
+1 0 0 1 20 16.8 cm
+Q
+q
+1 0 0 1 20 16.8 cm
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 .501961 rg
+0 0 .501961 RG
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL (https://github.com/orvant/orvant-snitch) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 127.526 cm
+Q
+q
+1 0 0 1 20.17323 84.92598 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 22.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 22.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F2 14 Tf 16.8 TL (Network Vulnerability Assessments:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 12.8 Tm  T* ET
+q
+1 0 0 1 20 16.8 cm
+Q
+q
+1 0 0 1 20 16.8 cm
+Q
+q
+1 0 0 1 20 0 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL 9.1 0 Td (\177) Tj T* -9.1 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 .501961 rg
+0 0 .501961 RG
+BT 1 0 0 1 0 2.8 Tm /F1 14 Tf 16.8 TL (https://www.orvant.com) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20 0 cm
+Q
+q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 20.17323 84.92598 cm
+Q
+q
+1 0 0 1 20.17323 28.23307 cm
+Q
+ 
+endstream
+endobj
+% 'R68': class PDFStream 
+68 0 obj
+% page stream
+<< /Length 474 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 20.17323 237.7795 cm
+n 0 14.17323 m 399.0236 14.17323 l S
+Q
+q
+1 0 0 1 20.17323 204.1795 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 16.8 cm
+q
+BT 1 0 0 1 0 2.8 Tm 16.8 TL /F1 14 Tf 0 0 0 rg (1) Tj T* ET
+Q
+Q
+q
+1 0 0 1 91.03937 0 cm
+q
+BT 1 0 0 1 0 19.6 Tm 234.8483 Tw 16.8 TL /F1 14 Tf 0 0 0 rg (scapy-http -) Tj T* 0 Tw 0 0 .501961 rg (https://github.com/invernizzi/scapy-http) Tj T* ET
+Q
+Q
+q
+Q
+Q
+ 
+endstream
+endobj
+% 'R69': class PDFPageLabels 
+69 0 obj
+% Document Root
+<< /Nums [ 0
+ 70 0 R
+ 1
+ 71 0 R
+ 2
+ 72 0 R
+ 3
+ 73 0 R
+ 4
+ 74 0 R
+ 5
+ 75 0 R
+ 6
+ 76 0 R
+ 7
+ 77 0 R
+ 8
+ 78 0 R
+ 9
+ 79 0 R
+ 10
+ 80 0 R
+ 11
+ 81 0 R
+ 12
+ 82 0 R
+ 13
+ 83 0 R
+ 14
+ 84 0 R
+ 15
+ 85 0 R
+ 16
+ 86 0 R ] >>
+endobj
+% 'R70': class PDFPageLabel 
+70 0 obj
+% None
+<< /S /D
+ /St 1 >>
+endobj
+% 'R71': class PDFPageLabel 
+71 0 obj
+% None
+<< /S /D
+ /St 2 >>
+endobj
+% 'R72': class PDFPageLabel 
+72 0 obj
+% None
+<< /S /D
+ /St 3 >>
+endobj
+% 'R73': class PDFPageLabel 
+73 0 obj
+% None
+<< /S /D
+ /St 4 >>
+endobj
+% 'R74': class PDFPageLabel 
+74 0 obj
+% None
+<< /S /D
+ /St 5 >>
+endobj
+% 'R75': class PDFPageLabel 
+75 0 obj
+% None
+<< /S /D
+ /St 6 >>
+endobj
+% 'R76': class PDFPageLabel 
+76 0 obj
+% None
+<< /S /D
+ /St 7 >>
+endobj
+% 'R77': class PDFPageLabel 
+77 0 obj
+% None
+<< /S /D
+ /St 8 >>
+endobj
+% 'R78': class PDFPageLabel 
+78 0 obj
+% None
+<< /S /D
+ /St 9 >>
+endobj
+% 'R79': class PDFPageLabel 
+79 0 obj
+% None
+<< /S /D
+ /St 10 >>
+endobj
+% 'R80': class PDFPageLabel 
+80 0 obj
+% None
+<< /S /D
+ /St 11 >>
+endobj
+% 'R81': class PDFPageLabel 
+81 0 obj
+% None
+<< /S /D
+ /St 12 >>
+endobj
+% 'R82': class PDFPageLabel 
+82 0 obj
+% None
+<< /S /D
+ /St 13 >>
+endobj
+% 'R83': class PDFPageLabel 
+83 0 obj
+% None
+<< /S /D
+ /St 14 >>
+endobj
+% 'R84': class PDFPageLabel 
+84 0 obj
+% None
+<< /S /D
+ /St 15 >>
+endobj
+% 'R85': class PDFPageLabel 
+85 0 obj
+% None
+<< /S /D
+ /St 16 >>
+endobj
+% 'R86': class PDFPageLabel 
+86 0 obj
+% None
+<< /S /D
+ /St 17 >>
+endobj
+xref
+0 87
+0000000000 65535 f
+0000000113 00000 n
+0000000272 00000 n
+0000000437 00000 n
+0000000610 00000 n
+0000000889 00000 n
+0000001168 00000 n
+0000001447 00000 n
+0000001726 00000 n
+0000002007 00000 n
+0000002166 00000 n
+0000002446 00000 n
+0000002728 00000 n
+0000002910 00000 n
+0000003082 00000 n
+0000003258 00000 n
+0000003538 00000 n
+0000003819 00000 n
+0000004100 00000 n
+0000004381 00000 n
+0000004662 00000 n
+0000004956 00000 n
+0000005230 00000 n
+0000005484 00000 n
+0000005726 00000 n
+0000006016 00000 n
+0000006286 00000 n
+0000006536 00000 n
+0000006883 00000 n
+0000007177 00000 n
+0000007416 00000 n
+0000007672 00000 n
+0000007900 00000 n
+0000008234 00000 n
+0000008480 00000 n
+0000008782 00000 n
+0000008941 00000 n
+0000009189 00000 n
+0000009315 00000 n
+0000009504 00000 n
+0000009682 00000 n
+0000009924 00000 n
+0000010094 00000 n
+0000010278 00000 n
+0000010442 00000 n
+0000010625 00000 n
+0000010807 00000 n
+0000010987 00000 n
+0000011175 00000 n
+0000011362 00000 n
+0000011552 00000 n
+0000011706 00000 n
+0000011954 00000 n
+0000012264 00000 n
+0000012516 00000 n
+0000014632 00000 n
+0000014884 00000 n
+0000015997 00000 n
+0000018774 00000 n
+0000019602 00000 n
+0000025724 00000 n
+0000028293 00000 n
+0000034266 00000 n
+0000036211 00000 n
+0000037968 00000 n
+0000039864 00000 n
+0000043195 00000 n
+0000043447 00000 n
+0000046273 00000 n
+0000046849 00000 n
+0000047157 00000 n
+0000047234 00000 n
+0000047311 00000 n
+0000047388 00000 n
+0000047465 00000 n
+0000047542 00000 n
+0000047619 00000 n
+0000047696 00000 n
+0000047773 00000 n
+0000047850 00000 n
+0000047928 00000 n
+0000048006 00000 n
+0000048084 00000 n
+0000048162 00000 n
+0000048240 00000 n
+0000048318 00000 n
+0000048396 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
+ [(5K\335\205\364TQx\267\005\250~\177\205!\303) (5K\335\205\364TQx\267\005\250~\177\205!\303)] 
+
+ /Info 36 0 R
+ /Root 35 0 R
+ /Size 87 >>
+startxref
+48444
+%%EOF

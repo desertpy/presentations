@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Packet Inspection Using Python</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="file:///home/godber/.virtualenvs/desertpy-presentations/local/lib/python2.7/site-packages/landslide/themes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="file:///home/godber/.virtualenvs/desertpy-presentations/local/lib/python2.7/site-packages/landslide/themes/default/css/screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="file:///home/godber/.virtualenvs/desertpy-presentations/local/lib/python2.7/site-packages/landslide/themes/default/js/slides.js"></script>
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Packet Inspection Using Python</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation.rst">presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/10
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Why?</h1></header>
+            
+            
+            <section><ul>
+<li><p class="first">Access to low-level kernel packet processing via a high-level API.</p>
+</li>
+<li><p class="first">Excellent for quick experiments &amp; prototypes.</p>
+</li>
+<li><p class="first">Can implement features not easy to implement with existing tooling:</p>
+<blockquote>
+<p>Log specific packets or connection attempts for further analysis.</p>
+<p>Identify overly chatty programs.</p>
+<p>Develop an outbound firewall to help protect against trojans.</p>
+</blockquote>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation.rst">presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/10
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Primary Building Blocks</h1></header>
+            
+            
+            <section><h2>iptables</h2>
+<p>Direct packets to a netfilter queue</p>
+
+
+<h2>nfqueue</h2>
+<p>Hook your program into a netfilter queue.</p>
+
+
+<h2>scapy</h2>
+<p>Intuitive packet inspection</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation.rst">presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/10
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>iptables</h1></header>
+            
+            
+            <section><p>Need to send packets to the netfilter queue using iptables.  Start
+with simple rules to minimize negative impacts to your network.</p>
+<ul class="simple">
+<li>Only outbound packets to a specific address:</li>
+</ul>
+<pre><span class="nv">$ </span>iptables -A OUTPUT --dst www.orvant.com -j NFQUEUE --queue-bypass
+</pre>
+<ul class="simple">
+<li>Only initial packets of outbound connections.  Otherwise, will
+process &amp; log all the packets for a connection:</li>
+</ul>
+<pre><span class="nv">$ </span>iptables -A OUTPUT -m state --state NEW -j NFQUEUE --queue-bypass
+</pre>
+<ul class="simple">
+<li>Send packets to specific queues, allowing for multiple processes:</li>
+</ul>
+<pre><span class="nv">$ </span>iptables -A INPUT -j NFQUEUE --queue-bypass --queue-num 0
+<span class="nv">$ </span>iptables -A OUTPUT -j NFQUEUE --queue-bypass --queue-num 1
+</pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation.rst">presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/10
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>nfqueue</h1></header>
+            
+            
+            <section><p>Python bindings to <cite>libnetfilter_queue</cite>.  Example &quot;Hello, world!&quot;:</p>
+<pre><span class="kn">import</span> <span class="nn">socket</span><span class="o">,</span> <span class="nn">nfqueue</span><span class="o">,</span> <span class="nn">atexit</span>
+
+<span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">packet</span><span class="p">):</span>                <span class="c"># callback method</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Hello, packet!&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">packet</span><span class="o">.</span><span class="n">get_data</span><span class="p">())</span>
+    <span class="n">packet</span><span class="o">.</span><span class="n">set_verdict</span><span class="p">(</span><span class="n">nfqueue</span><span class="o">.</span><span class="n">NF_ACCEPT</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">shutdown</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>                    <span class="c"># cleanup method</span>
+    <span class="n">q</span><span class="o">.</span><span class="n">unbind</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">)</span>
+    <span class="n">q</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="n">nfqueue</span><span class="o">.</span><span class="n">queue</span><span class="p">()</span>
+<span class="n">q</span><span class="o">.</span><span class="n">set_callback</span><span class="p">(</span><span class="n">process</span><span class="p">)</span>             <span class="c"># register callback</span>
+<span class="n">q</span><span class="o">.</span><span class="n">fast_open</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">)</span>      <span class="c"># bind to queue 0</span>
+<span class="n">atexit</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">shutdown</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>        <span class="c"># make sure to clean up</span>
+<span class="n">q</span><span class="o">.</span><span class="n">try_run</span><span class="p">()</span>                         <span class="c"># start processing the queue</span>
+</pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation.rst">presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/10
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>scapy</h1></header>
+            
+            
+            <section><p>The Scapy library is a good option for inspecting packets (see dpkt or impacket for alternatives).</p>
+<pre><span class="kn">from</span> <span class="nn">scapy.all</span> <span class="kn">import</span> <span class="n">IP</span><span class="p">,</span> <span class="n">TCP</span><span class="p">,</span> <span class="n">UDP</span><span class="p">,</span> <span class="n">Raw</span>
+
+<span class="c"># Easy to add new protocols to scapy [1]</span>
+<span class="kn">from</span> <span class="nn">HTTP</span> <span class="kn">import</span> <span class="n">HTTPRequest</span>
+
+<span class="k">def</span> <span class="nf">log_http_domains</span><span class="p">(</span><span class="n">packet</span><span class="p">):</span>       <span class="c"># our nfqueue callback</span>
+    <span class="n">packet</span><span class="o">.</span><span class="n">set_verdict</span><span class="p">(</span><span class="n">nfqueue</span><span class="o">.</span><span class="n">NF_ACCEPT</span><span class="p">)</span>
+    <span class="n">ip</span> <span class="o">=</span> <span class="n">IP</span><span class="p">(</span><span class="n">packet</span><span class="o">.</span><span class="n">get_data</span><span class="p">())</span>
+    <span class="k">if</span> <span class="n">HTTPRequest</span> <span class="ow">in</span> <span class="n">ip</span><span class="p">:</span>           <span class="c"># only HTTP request packets</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="n">pkt</span><span class="p">[</span><span class="n">HTTPRequest</span><span class="p">]</span>  <span class="c"># how to access layers</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;HOST:&quot;</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">Host</span><span class="p">)</span>
+</pre>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td>scapy-http - <a class="reference external" href="https://github.com/invernizzi/scapy-http">https://github.com/invernizzi/scapy-http</a></td></tr>
+</tbody>
+</table></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation.rst">presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/10
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>orvant-snitch</h1></header>
+            
+            
+            <section><p>Inspired by Little Snitch for OSX.  Is a small, headless version for
+Linux machines.  Useful to answer questions like: &quot;What traffic is
+program X causing?&quot;</p>
+<pre><span class="nv">$ </span>iptables -A OUTPUT -m state --state NEW <span class="se">\</span>
+    -j NFQUEUE --queue-bypass --queue-num 1
+<span class="nv">$ </span>cat /etc/ov-snitch.conf
+  rules:
+    /usr/bin/curl:
+      443: <span class="o">{</span>deny: <span class="nb">true</span><span class="o">}</span>
+  queue: 1
+<span class="nv">$ </span>ov-snitch
+<span class="nv">$ </span>tail /var/log/syslog | <span class="se">\</span>
+    awk -F <span class="s1">&#39;[ :|]+&#39;</span> <span class="s1">&#39;$0 ~ &quot;ov-snitch&quot; {</span>
+<span class="s1">      printf(&quot;%-10s %15s:%-5s %s\n&quot;,</span>
+<span class="s1">             $(NF-8), $(NF-3), $(NF-2), $(NF-1));</span>
+<span class="s1">    }&#39;</span> &amp;
+<span class="nv">$ </span>curl --max-time 1 -I <span class="s1">&#39;http://www.orvant.com&#39;</span> &gt; /dev/null
+  allowed    69.160.46.73:80    /usr/bin/curl
+<span class="nv">$ </span>curl --max-time 1 -I <span class="s1">&#39;https://www.orvant.com&#39;</span> &gt; /dev/null
+  denied     69.160.46.73:443   /usr/bin/curl
+</pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation.rst">presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/10
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Some Caveats</h1></header>
+            
+            
+            <section><ul class="simple">
+<li>Make sure to use <cite>--queue-bypass</cite> in iptables rules.  Otherwise,
+packets will hang if there is no active program processing the
+queue.</li>
+<li>These libraries are getting stale.</li>
+<li>Working at the packet level.  Easy to mess up the connection if you
+want to mangle a packet (e.g. alter the payload, IP address, or
+port).  Have to worry about checksums, sequence numbers, etc.</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation.rst">presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/10
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Some References</h1></header>
+            
+            
+            <section><ul>
+<li><p class="first">NFQueue Bindings - <a class="reference external" href="https://www.wzdftpd.net/redmine/projects/nfqueue-bindings">https://www.wzdftpd.net/redmine/projects/nfqueue-bindings</a></p>
+</li>
+<li><p class="first">Scapy - <a class="reference external" href="http://www.secdev.org/projects/scapy/">http://www.secdev.org/projects/scapy/</a></p>
+</li>
+<li><dl class="first docutils">
+<dt>NetFilter - <a class="reference external" href="http://www.netfilter.org/">http://www.netfilter.org/</a></dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="https://home.regit.org/netfilter-en/using-nfqueue-and-libnetfilter_queue/">https://home.regit.org/netfilter-en/using-nfqueue-and-libnetfilter_queue/</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Alternatives to nfqueue-bindings:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://code.google.com/p/python-libnetfilter-queue/">http://code.google.com/p/python-libnetfilter-queue/</a> (uses ctypes)</li>
+<li><a class="reference external" href="https://github.com/kti/python-netfilterqueue">https://github.com/kti/python-netfilterqueue</a> (uses cython, in pypi)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation.rst">presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/10
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation.rst -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Thank You!</h1></header>
+            
+            
+            <section><ul>
+<li><dl class="first docutils">
+<dt>Erik Stephens</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="mailto:erik&#64;orvant.com">erik&#64;orvant.com</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>code for orvant-snitch:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="https://github.com/orvant/orvant-snitch">https://github.com/orvant/orvant-snitch</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Network Vulnerability Assessments:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="https://www.orvant.com">https://www.orvant.com</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation.rst">presentation.rst</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/10
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Packet Inspection Using Python</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">Why?</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">Primary Building Blocks</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">iptables</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">nfqueue</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">scapy</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">orvant-snitch</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">Some Caveats</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">Some References</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">Thank You!</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
