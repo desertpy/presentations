@@ -36,6 +36,14 @@ def build():
     local("mkdir -p output/virtualenv-godber")
     local("cp virtualenv-godber/virtualenv.pdf output/virtualenv-godber")
 
+    local("mkdir -p output/pandas-and-friends-godber")
+    local("cp pandas-intro-godber/*.{gif,jpg} output/pandas-and-friends-godber/", shell="/bin/bash")
+    local("cp pandas-intro-godber/presentation-deck.html output/pandas-and-friends-godber/index.html")
+    local("cp pandas-intro-godber/presentation.pdf output/pandas-and-friends-godber/pandas-and-friends.pdf")
+
+    local("cp -r salt-stack-forrest output/")
+
+
 def publish():
     """Publish the static content to Github Pages"""
     local("ghp-import -p output/")
