@@ -43,6 +43,13 @@ def build():
 
     local("cp -r salt-stack-forrest output/")
 
+    # Adding Sara Braden's Feb 2014 talk
+    local("cp -r image_processing_pillow output/")
+
+    # Adding Austin's March 2014 talk
+    local("cp -r ipython-godber output/")
+
+
 
 def publish():
     """Publish the static content to Github Pages"""
