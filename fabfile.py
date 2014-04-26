@@ -11,9 +11,11 @@ def create():
     if not os.path.exists(dirname):
         os.makedirs(dirname)
 
+
 def clean():
     """Cleans up the build directory"""
     local("rm -r output")
+
 
 def build():
     """Builds the presentation provided"""
@@ -49,6 +51,8 @@ def build():
     # Adding Austin's March 2014 talk
     local("cp -r ipython-godber output/")
 
+    # Adding Trevor's PEP talk from March 2014
+    local("cp -r pep-428-pathlib-trevor output/")
 
 
 def publish():

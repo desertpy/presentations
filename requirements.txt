@@ -9,5 +9,5 @@ paramiko==1.10.1
 pdfrw==0.1
 pycrypto==2.6
 reportlab==2.7
-rst2pdf==0.93.dev
+rst2pdf==0.93
 wsgiref==0.1.2
