@@ -54,7 +54,17 @@ def build():
     # Adding Trevor's PEP talk from March 2014
     local("cp -r pep-428-pathlib-trevor output/")
 
+    # Adding Jerry's talk from April 2014
+    local("cp -r python3-jerry output/")
+
 
 def publish():
     """Publish the static content to Github Pages"""
     local("ghp-import -p output/")
+
+
+def all():
+    """Cleans, builds, then publishes to github"""
+    clean()
+    build()
+    publish()
