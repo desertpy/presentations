@@ -57,6 +57,9 @@ def build():
     # Adding Jerry's talk from April 2014
     local("cp -r python3-jerry output/")
 
+    # Adding Sara's PEP450 talk from May 2014
+    local("cp -r pep-450-braden output/")
+
 
 def publish():
     """Publish the static content to Github Pages"""
