@@ -61,8 +61,14 @@ def build():
     local("cp -r pep-450-braden output/")
 
     # Austin's pytest talk, June 2014
-    local("cp -r pytest-godber/Pytest_Presentation.slides.html output/")
+    local("mkdir -p output/pytest-godber")
+    local("cp -r pytest-godber/Pytest_Presentation.slides.html output/pytest-godber/index.html")
+    local("cp -r pytest-godber/reveal.js output/pytest-godber/")
+    local("cp -r pytest-godber/custom.css output/pytest-godber/")
+    local("cp -r pytest-godber/*.png output/pytest-godber/")
 
+    # Adding the Thunderstorm 2014 directory to output
+    local("cp -r thunderstorm-2014 output")
 
 def publish():
     """Publish the static content to Github Pages"""
