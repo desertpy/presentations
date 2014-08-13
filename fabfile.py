@@ -60,6 +60,9 @@ def build():
     # Adding Sara's PEP450 talk from May 2014
     local("cp -r pep-450-braden output/")
 
+    # Austin's pytest talk, June 2014
+    local("cp -r pytest-godber/Pytest_Presentation.slides.html output/")
+
 
 def publish():
     """Publish the static content to Github Pages"""

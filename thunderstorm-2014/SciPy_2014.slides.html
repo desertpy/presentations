@@ -9,10 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>Pytest_Presentation slides</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<title>SciPy_2014 slides</title>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="reveal.js/css/reveal.css">
@@ -21,16 +18,9 @@
 <!-- For syntax highlighting -->
 <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 <script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'reveal.js/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
-
+document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 </script>
 
 <!--[if lt IE 9]>
@@ -1309,7 +1299,6 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-weibo:before{content:"\f18a"}
 .icon-renren:before{content:"\f18b"}
 code{color:#000}
-pre{font-size:inherit;line-height:inherit}
 .border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 .corner-all{border-radius:4px}
 .hbox{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
@@ -1373,8 +1362,6 @@ input.nbname_input,input.engine_num_input{padding-top:3px;padding-bottom:3px;hei
 input.engine_num_input{width:60px}
 .highlight_text{color:#00f}
 #project_name>.breadcrumb{padding:0;margin-bottom:0;background-color:transparent;font-weight:bold}
-.folder_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f114"}
-.notebook_icon:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;content:"\f02d"}
 .ansibold{font-weight:bold}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
@@ -1397,15 +1384,15 @@ div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
 div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
 div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
 @media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7}
 div.prompt:empty{padding-top:0;padding-bottom:0}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 @media (max-width:480px){div.input{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:#000080;border-top:1px solid transparent}
 div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}
+div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
 .CodeMirror{line-height:1.21429em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
-.CodeMirror-lines{padding:.4em}
+@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
 .CodeMirror-linenumber{padding:0 8px 0 4px}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px}
 .CodeMirror pre{padding:0;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
@@ -1440,7 +1427,7 @@ div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-bo
 div.output_area .rendered_html table{margin-left:0;margin-right:0}
 div.output_area .rendered_html img{margin-left:0;margin-right:0}
 .output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}
-@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;color:#000;background-color:transparent;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
+@media (max-width:480px){div.output_area{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:#000;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit}
 div.output_subarea{padding:.4em .4em 0 .4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
 div.output_text{text-align:left;color:#000;line-height:1.21429em}
 div.output_stderr{background:#fdd;}
@@ -1561,7 +1548,7 @@ ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin
 .notification_widget{color:#777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240,240,240,0.5)}.notification_widget.span{padding-right:2px}
 div#pager_splitter{height:8px}
 #pager-container{position:relative;padding:15px 0}
-div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
+div#pager{font-size:14px;line-height:20px;overflow:auto;display:none}div#pager pre{font-size:13px;line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}
 .quickhelp{display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}
 .shortcut_key{display:inline-block;width:20ex;text-align:right;font-family:monospace}
 .shortcut_descr{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
@@ -1725,12 +1712,10 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pytest">Pytest</h1>
-<h2 id="a-python-testing-framework">A Python testing framework</h2>
-<h2 id="http-pytest-org"><a href="http://pytest.org">http://pytest.org</a></h2>
-<p>Austin Godber
-@godber</p>
-<p>DesertPy - 6/25/2014</p>
+<h1 id="scipy-2014">SciPy 2014</h1>
+<h3 id="austin-godber">Austin Godber</h3>
+<h4 id="-godber">@godber</h4>
+<p>July 2014</p>
 </div>
 </div>
 </div></section>
@@ -1742,8 +1727,105 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="testing">Testing</h1>
-<p>What, Why and Where?</p>
+<h1 id="ipython-notebook">IPython Notebook</h1>
+<ul>
+<li>Backend renamed to Jupyter to encourage language agnostic use</li>
+<li>Python users will still just type <code>ipython notebook</code></li>
+<li>Vim integration (vim connects to IPython kernel to interact with notebook)</li>
+<li>RISE - Live Editable Slideshows in the works</li>
+<li>CoLaboratory - Storing IPython Notebooks in Google Drive, running in NaCl</li>
+</ul>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="reproducability">Reproducability</h1>
+<ul>
+<li>Lots of talk and tools to help do reproducable science.</li>
+<li>Persisting Data</li>
+<li>Persisting Code - DOI</li>
+<li>Long Term Archive - Outliving the PI.</li>
+<li>Virtual Machines and Containers</li>
+<li>Other tools - hashdist</li>
+<li>DOE Shrink Wrapped Computer</li>
+</ul>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="miscellaneous">Miscellaneous</h1>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="geopandas">GeoPandas</h1>
+<p>Geospatial Data Types in Pandas Series and DataFrames.</p>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="blaze">Blaze</h1>
+<ul>
+<li>Generalizing NumPy datastructures to utilize different backends</li>
+<li>Multiple dispatch - Like PEP 443, but dispatches based on function signature rather than type alone</li>
+</ul>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="astropy">AstroPy</h1>
+<ul>
+<li>WCSAxes - Matplotlib Axes sub-class that handles plotting tics, labels and grids for arbitrary coordinate systems.</li>
+<li>ginga - FITS image viewer, I sprinted on my own PDS viewer derived from ginga</li>
+<li>ccdproc - CCD Camera calibration library, I sprinted on this as well</li>
+<li>yt - volumetric visualization (loading data from 31TB file over web)</li>
+</ul>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="packaging">Packaging</h1>
+<ul>
+<li>conda</li>
+</ul>
 </div>
 </div>
 </div><div class="fragment">
@@ -1754,7 +1836,7 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Does your code do what it should?</li>
+<li>conda</li>
 </ul>
 </div>
 </div>
@@ -1767,33 +1849,7 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Does it continue to do what it should after you modify it?</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Three months later, how do you remember what it was supposed to do anyway?</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Tests can help <em>while</em> you&#39;re writing the code.</li>
+<li>conda</li>
 </ul>
 </div>
 </div>
@@ -1807,40 +1863,11 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="remember">Remember</h1>
-<pre><code>Always code as if the guy who ends up
-maintaining your code will be a violent
-psychopath who knows where you live.
-
-Code for readability.
-</code></pre>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I am sure the psychopath will appreciate a working test suite too.</p>
-</div>
-</div>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="testing-types">Testing Types</h1>
+<h1 id="visualization">Visualization</h1>
 <ul>
-<li><strong>unit testing</strong> - test functionality of individual procedures</li>
-<li><strong>integration testing</strong> - test how parts work together (interfaces)</li>
-<li><strong>system testing</strong> - testing the whole system at a high level (black box, functional)</li>
+<li>Bokeh 0.5</li>
+<li>mpld3</li>
+<li>VNC like mpl backend</li>
 </ul>
 </div>
 </div>
@@ -1853,12 +1880,9 @@ Code for readability.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="testing-in-python">Testing in Python</h1>
+<h1 id="lightning-talks">Lightning Talks</h1>
 <ul>
-<li><a href="https://docs.python.org/2/library/unittest.html">unittest</a> - assertion based</li>
-<li><a href="https://docs.python.org/2/library/doctest.html">doctest</a> - example based, integrated with docstrings</li>
-<li><a href="https://nose.readthedocs.org/en/latest/">nose</a> - assertion based tests with framework and plugins</li>
-<li><a href="http://pytest.org/latest/">pytest</a> - framework that supports all of the above and more</li>
+<li>Waffles!</li>
 </ul>
 </div>
 </div>
@@ -1871,1129 +1895,11 @@ Code for readability.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pytest">pytest</h1>
+<h1 id="final">Final</h1>
 <ul>
-<li>Pytest can run <strong>unittest</strong>, <strong>doctest</strong> and <strong>nose</strong> style test suites</li>
-<li>no-boilerplate</li>
-<li>quick to get started, powerful to do more complex things</li>
-<li>plugins</li>
-<li>I started with <strong>nose</strong> and switched to <strong>pytest</strong></li>
+<li>Site - <a href="https://conference.scipy.org/scipy2014/schedule/">https://conference.scipy.org/scipy2014/schedule/</a></li>
+<li>Videos - <a href="http://www.youtube.com/playlist?list=PLYx7XA2nY5GfuhCvStxgbynFNrxr3VFog">http://www.youtube.com/playlist?list=PLYx7XA2nY5GfuhCvStxgbynFNrxr3VFog</a></li>
 </ul>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="basic-test">Basic Test</h1>
-<p>In its simplest form, a <strong>pytest</strong> test is a function with test in the name and will be found automatically if test is in in the filename (details later).</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[20]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">%%</span><span class="k">writefile</span> <span class="n">test_my_add</span><span class="o">.</span><span class="n">py</span>
-<span class="k">def</span> <span class="nf">my_add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-
-<span class="k">def</span> <span class="nf">test_my_add</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">my_add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Overwriting test_my_add.py
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="running-the-basic-test">Running the basic test</h1>
-<p>Run the following command in the directory with the file: </p>
-<p><code>py.test</code></p>
-<p>The output would look like this:</p>
-<p><img src="pytest-basic-output.png"></p>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="failed-test-output">Failed Test Output</h1>
-<p><img src="pytest-basic-output-fail.png"></p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pytest-test-discovery">Pytest Test Discovery</h1>
-<p>How does <code>pytest</code> find its tests?</p>
-<ul>
-<li>Collection starts from the initial command line</li>
-<li>Recurse into directories, unless they match <code>norecursedirs</code></li>
-<li><code>test_*.py</code> or <code>*_test.py</code> files, imported by their package name.</li>
-<li>Classes prefixed with <code>Test</code> (without an <code>__init__</code> method)</li>
-<li>Functions or methods prefixed with <code>test_</code></li>
-</ul>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="explaining-the-basic-example">Explaining the Basic Example</h1>
-<ul>
-<li>Basic example file was <code>test_my_add.py</code></li>
-<li>Executed by running: <code>py.test</code></li>
-<li>Had it been <code>my_add.py</code> </li>
-<li>Execute by running <code>py.test my_add.py</code>.</li>
-</ul>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pytest-and-doctest">Pytest and Doctest</h1>
-<ul>
-<li>By default, <code>pytest</code> only runs doctests in <code>*.txt</code> files</li>
-<li>Add more with <code>--doctest-glob=&#39;*.rst&#39;</code></li>
-<li>Run doctests in module docstrings with: <code>py.test --doctest-modules</code></li>
-</ul>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Two tests: a doctest and assertion based unit test.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[14]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">%%</span><span class="k">writefile</span> <span class="n">test_my_add2</span><span class="o">.</span><span class="n">py</span>
-<span class="k">def</span> <span class="nf">my_add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Sample doctest</span>
-<span class="sd">    &gt;&gt;&gt; my_add(3,4)</span>
-<span class="sd">    7</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-
-<span class="k">def</span> <span class="nf">test_my_add</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">my_add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Overwriting test_my_add2.py
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[17]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">!</span>py.test test_my_add2.py
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-============================= test session starts ==============================</span>
-platform linux2 -- Python 2.7.6 -- py-1.4.20 -- pytest-2.5.2
-collected 1 items 
-
-test_my_add2.py .
-
-<span class="ansigreen"></span>=========================== 1 passed in 0.01 seconds ===========================</span>
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>only one test ran!?!?</p>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[18]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">!</span>py.test test_my_add2.py --doctest-modules
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-============================= test session starts ==============================</span>
-platform linux2 -- Python 2.7.6 -- py-1.4.20 -- pytest-2.5.2
-collected 2 items 
-
-test_my_add2.py ..
-
-<span class="ansigreen"></span>=========================== 2 passed in 0.04 seconds ===========================</span>
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>much better ... two run with <strong>--doctest-modules</strong> argument</p>
-</div>
-</div>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pytest-and-python-unittest">Pytest and Python unittest</h1>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[21]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">%%</span><span class="k">writefile</span> <span class="n">test_my_add3</span><span class="o">.</span><span class="n">py</span>
-<span class="kn">import</span> <span class="nn">unittest</span>
-
-<span class="k">def</span> <span class="nf">my_add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-
-<span class="k">class</span> <span class="nc">TestMyAdd</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">test_add1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="n">my_add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="mi">7</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Writing test_my_add3.py
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[22]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">!</span>py.test test_my_add3.py
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-============================= test session starts ==============================</span>
-platform linux2 -- Python 2.7.6 -- py-1.4.20 -- pytest-2.5.2
-collected 1 items 
-
-test_my_add3.py .
-
-<span class="ansigreen"></span>=========================== 1 passed in 0.03 seconds ===========================</span>
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>runs as you would expect, without modification.</p>
-</div>
-</div>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="reflection">Reflection</h1>
-<p>Just to be clear ...</p>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>use of <strong>doctest</strong> and <strong>unittest</strong> are optional</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>legacy perhaps</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>tests can be implemented as shown in the base example</li>
-</ul>
-</div>
-</div>
-</div>
-    </div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>mix and match even</li>
-</ul>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="split-your-tests-out-into-a-separate-file">Split your tests out into a separate file</h1>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="into-a-test-subdirectory-even">Into a <code>test/</code> subdirectory even</h1>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="like-so-">Like so:</h1>
-<p><img src="py-module-test-layout.png"></p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pytest-assertions">Pytest Assertions</h1>
-<ul>
-<li>Python <code>assert</code> statement</li>
-<li>Expecting exceptions: <code>pytest.raises()</code></li>
-<li>Expecting failure (coming up)</li>
-</ul>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="new-example">New Example</h1>
-<p>The following <code>badstats</code> module will be used in upcoming examples:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[26]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">%</span><span class="k">load</span> <span class="n">badstats</span><span class="o">/</span><span class="n">badstats</span><span class="o">/</span><span class="n">__init__</span><span class="o">.</span><span class="n">py</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[27]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">_sum</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-        <span class="n">total</span> <span class="o">+=</span> <span class="n">d</span>
-    <span class="k">return</span> <span class="n">total</span>
-
-<span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">_sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[30]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">%</span><span class="k">load</span> <span class="n">badstats</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="n">test_badstats_sum_a</span><span class="o">.</span><span class="n">py</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">badstats</span> <span class="kn">import</span> <span class="n">_sum</span>
-
-<span class="k">def</span> <span class="nf">test_sum_simple</span><span class="p">():</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">_sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
-
-<span class="k">def</span> <span class="nf">test_sum_fails</span><span class="p">():</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">_sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[31]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">!</span>py.test badstats/tests/test_badstats_sum_a.py
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-============================= test session starts ==============================</span>
-platform linux2 -- Python 2.7.6 -- py-1.4.20 -- pytest-2.5.2
-collected 2 items 
-
-badstats/tests/test_badstats_sum_a.py .F
-
-=================================== FAILURES ===================================
-________________________________ test_sum_fails ________________________________
-
-    def test_sum_fails():</span>
-        data = (1.2, -1.0)</span>
-&gt;       assert _sum(data) == 0.2</span>
-</span><span class="ansired">E       assert 0.19999999999999996 == 0.2</span>
-</span><span class="ansired">E        +  where 0.19999999999999996 = _sum((1.2, -1.0))</span>
-
-badstats/tests/test_badstats_sum_a.py:9: AssertionError
-</span><span class="ansired">====================== 1 failed, 1 passed in 0.01 seconds ======================</span>
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="floating-point-is-hard-">Floating Point is Hard :-/</h1>
-</div>
-</div>
-</div><div class="fragment">
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Fix it later</li>
-<li>keep the test as a reminder</li>
-<li>but mark it as expected to fail with <code>xfail</code>.</li>
-</ul>
-</div>
-</div>
-</div>
-    </div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[33]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">%</span><span class="k">load</span> <span class="n">badstats</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="n">test_badstats_sum_b</span><span class="o">.</span><span class="n">py</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">pytest</span>
-<span class="kn">from</span> <span class="nn">badstats</span> <span class="kn">import</span> <span class="n">_sum</span>
-
-<span class="k">def</span> <span class="nf">test_sum_simple</span><span class="p">():</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">_sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
-
-<span class="nd">@pytest.mark.xfail</span>
-<span class="k">def</span> <span class="nf">test_sum_fails</span><span class="p">():</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">_sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[35]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">!</span>py.test badstats/tests/test_badstats_sum_b.py
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-============================= test session starts ==============================</span>
-platform linux2 -- Python 2.7.6 -- py-1.4.20 -- pytest-2.5.2
-collected 2 items 
-
-badstats/tests/test_badstats_sum_b.py .x
-
-<span class="ansigreen"></span>===================== 1 passed, 1 xfailed in 0.01 seconds ======================</span>
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pytest-xfail-conditions-and-more">Pytest Xfail, Conditions and More</h1>
-<ul>
-<li>Modfying test execution using <code>pytest</code> module</li>
-<li>Use of the decorator <code>@pytest.mark.xfail</code>.</li>
-<li>Skip tests with conditionals and <code>@pytest.mark.skipif</code></li>
-<li>Custom Markers: <code>@pytest.mark.NAME</code><ul>
-<li><code>@pytest.mark.webtest</code></li>
-<li><code>py.test -v -m webtest</code></li>
-</ul>
-</li>
-<li>See <a href="http://pytest.org/latest/mark.html">mark documentation</a></li>
-</ul>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="extended-xfail-example">Extended Xfail Example</h1>
-<ul>
-<li>Variable Use</li>
-<li>Xfail conditional (and reason)</li>
-</ul>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[36]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">%</span><span class="k">load</span> <span class="n">badstats</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="n">test_badstats_sum_c</span><span class="o">.</span><span class="n">py</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">pytest</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">badstats</span> <span class="kn">import</span> <span class="n">_sum</span>
-<span class="n">xfail</span> <span class="o">=</span> <span class="n">pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">xfail</span>
-
-<span class="k">def</span> <span class="nf">test_sum_simple</span><span class="p">():</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">_sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
-
-<span class="nd">@xfail</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s">&#39;linux2&#39;</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="s">&#39;requires windows&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_sum_fails</span><span class="p">():</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">_sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[37]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">!</span>py.test badstats/tests/test_badstats_sum_c.py
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-============================= test session starts ==============================</span>
-platform linux2 -- Python 2.7.6 -- py-1.4.20 -- pytest-2.5.2
-collected 2 items 
-
-badstats/tests/test_badstats_sum_c.py .x
-
-<span class="ansigreen"></span>===================== 1 passed, 1 xfailed in 0.01 seconds ======================</span>
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="parametrize">Parametrize</h1>
-<p>When you want to test a number of inputs on the same function, use <code>@pytest.mark.parametrize</code>.</p>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[40]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">%</span><span class="k">load</span> <span class="n">badstats</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="n">test_badstats_sum_param</span><span class="o">.</span><span class="n">py</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">pytest</span>
-<span class="kn">from</span> <span class="nn">badstats</span> <span class="kn">import</span> <span class="n">_sum</span>
-
-<span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="s">&quot;input,expected&quot;</span><span class="p">,</span> <span class="p">[</span>
-    <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="mi">10</span><span class="p">),</span>
-    <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mi">6</span><span class="p">),</span>
-    <span class="n">pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">xfail</span><span class="p">(((</span><span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">),</span> <span class="mf">0.2</span><span class="p">)),</span>
-<span class="p">])</span>
-<span class="k">def</span> <span class="nf">test_sum</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="n">_sum</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[41]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">!</span>py.test badstats/tests/test_badstats_sum_param.py
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-============================= test session starts ==============================</span>
-platform linux2 -- Python 2.7.6 -- py-1.4.20 -- pytest-2.5.2
-collected 3 items 
-
-badstats/tests/test_badstats_sum_param.py ..x
-
-<span class="ansigreen"></span>===================== 2 passed, 1 xfailed in 0.01 seconds ======================</span>
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Note there appear to have been three tests executed.</p>
-<p>You can inspect what tests are &#39;found&#39; by using the <code>py.test --collect-only</code>.</p>
-<p><img src='pytest-collect-only.png'></p>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pytest-fixtures">Pytest Fixtures</h1>
-<p>&quot;The purpose of test fixtures is to provide a fixed baseline upon which tests can reliably and repeatedly execute. pytest fixtures offer dramatic improvements over the classic xUnit style of setup/teardown functions.&quot;</p>
-<p>However, <a href="http://pytest.org/latest/xunit_setup.html">classic xUnit style Setup/teardown functions</a> are still available.</p>
-</div>
-</div>
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[42]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">%</span><span class="k">load</span> <span class="n">badstats</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="n">test_badstats_fixture</span><span class="o">.</span><span class="n">py</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">pytest</span>
-<span class="kn">import</span> <span class="nn">badstats</span>
-
-<span class="nd">@pytest.fixture</span>
-<span class="k">def</span> <span class="nf">data</span><span class="p">():</span>
-    <span class="k">return</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">test_sum_simple</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="n">badstats</span><span class="o">.</span><span class="n">_sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mf">10.0</span>
-
-<span class="k">def</span> <span class="nf">test_mean_simple</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="n">badstats</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mf">2.5</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In&nbsp;[43]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="o">!</span>py.test badstats/tests/test_badstats_fixture.py
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-============================= test session starts ==============================</span>
-platform linux2 -- Python 2.7.6 -- py-1.4.20 -- pytest-2.5.2
-collected 2 items 
-
-badstats/tests/test_badstats_fixture.py ..
-
-<span class="ansigreen"></span>=========================== 2 passed in 0.01 seconds ===========================</span>
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="running-tests-on-module-code">Running Tests on Module Code</h1>
-<p>Environment setup can differ somewhat, but if you wanted to run the code shown above you have two choices:</p>
-<ul>
-<li>Install <code>badstats</code> module with <code>pip install -e .</code></li>
-<li>Run pytest in <code>badstats</code> top directory with PYTHONPATH set: <code>PYTHONPATH=. py.test</code></li>
-</ul>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="other-things">Other Things</h1>
-<ul>
-<li>Stand Alone Self Encapsulated Tests: <code>py.test --genscript=runtests.py</code></li>
-<li>Stop output capture (see <code>print()</code> statements): <code>py.test -s</code></li>
-<li></li>
-</ul>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="advanced-topics-for-lightning-talks">Advanced Topics for Lightning Talks</h1>
-<ul>
-<li>Grouping Tests in Classes</li>
-<li><a href="http://pytest.org/latest/xunit_setup.html">xUnit Style Setup/Teardown</a></li>
-<li>Understanding Fixture Details: (scope, finalize, parameterization)</li>
-<li>Integration with other tools: <strong><code>tox</code></strong>, <code>setuptools</code></li>
-<li>Advanced Reporting</li>
-<li>Handling Command Line Options</li>
-<li>Plugins and configuration using <code>conftest.py</code></li>
-</ul>
-</div>
-</div>
-</div></section>
-    </section><section>
-    <section>
-    
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="thank-you">Thank You</h1>
-<p>Austin Godber <strong>@godber</strong></p>
-<p><a href="http://desertpy.com/pages/presentations.html">http://desertpy.com/pages/presentations.html</a></p>
 </div>
 </div>
 </div></section>
@@ -3012,8 +1918,6 @@ Reveal.initialize({
 controls: true,
 progress: true,
 history: true,
-width: 1024,
-height: 768,
 
 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
