@@ -1,0 +1,85 @@
+begin
+    prog = master
+    button = KEY_KP1
+    config = one
+end
+
+begin
+    prog = master
+    button = KEY_KP2
+    config = two
+end
+
+begin
+    prog = master
+    button = KEY_KP3
+    config = three
+end
+
+
+begin
+    prog = master2
+    button = KEY_UP
+    config = up
+end
+
+begin
+    prog = master2
+    button = KEY_DOWN
+    config = down
+end
+
+begin
+    prog = master2
+    button = KEY_LEFT
+    config = left
+end
+
+begin
+    prog = master2
+    button = KEY_RIGHT
+    config = right
+end
+
+
+begin
+    prog = setalarm
+    button = KEY_UP
+    config = up
+end
+
+begin
+    prog = setalarm
+    button = KEY_DOWN
+    config = down
+end
+
+begin
+    prog = setalarm
+    button = KEY_LEFT
+    config = left
+end
+
+begin
+    prog = setalarm
+    button = KEY_RIGHT
+    config = right
+end
+
+begin
+    prog = setalarm
+    button = KEY_SETUP
+    config = setup
+end
+
+begin
+    prog = setalarm
+    button = KEY_STOP
+    config = stop
+end
+
+begin
+    prog = setalarm
+    button = KEY_ENTER
+    config = enter
+end

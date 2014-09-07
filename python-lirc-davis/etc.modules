@@ -1,0 +1,15 @@
+# /etc/modules: kernel modules to load at boot time.
+#
+# This file contains the names of kernel modules that should be loaded
+# at boot time, one per line. Lines beginning with "#" are ignored.
+# Parameters can be specified after the module name.
+
+snd-bcm2835
+
+# valid pins are: 0, 1, 4, 8, 7, 9, 10, 11, 14, 15, 17, 18, 21, 22, 23, 24, 25
+lirc_dev
+lirc_rpi gpio_in_pin=7 debug=1
+
+i2c-bcm2708
+i2c-dev
+
