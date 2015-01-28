@@ -14,7 +14,7 @@ def create():
 
 def clean():
     """Cleans up the build directory"""
-    local("rm -r output")
+    local("rm -rf output")
 
 
 def build():
@@ -26,7 +26,7 @@ def build():
 
     # Fabric by godber
     local("mkdir -p output/fabric-godber")
-    local("landslide -i fabric-godber/presentation.rst -d output/fabric-godber/index.html")
+    local("cp fabric-godber/fabric-output/index.html output/fabric-godber")
 
     # Python and MongoDB by wtolson
     local("cp -r python-and-mongodb output/")
