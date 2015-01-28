@@ -57,7 +57,7 @@ def build():
     # Adding Jerry's talk from April 2014
     local("cp -r python3-jerry output/")
 
-    # Adding Sara's PEP450 talk from May 2014
+    # Adding Sarah's PEP450 talk from May 2014
     local("cp -r pep-450-braden output/")
 
     # Austin's pytest talk, June 2014
@@ -69,6 +69,19 @@ def build():
 
     # Adding the Thunderstorm 2014 directory to output
     local("cp -r thunderstorm-2014 output")
+
+    # Adding the Exploring Numpy and Python LIRC
+    local("cp -r exploring-numpy-godber output")
+    local("cp -r python-lirc-davis output")
+
+    # Adding Sarah's Machine Learning Talk
+    local("cp -r machine_learning_braden output")
+
+    # Adding Tim's PyPy talk
+    local("cp -r pypy-hochberg output")
+
+    local("cp -r antlr-preston output")
+    local("cp -r pandas-intro-godber-jan-2014 output")
 
 def publish():
     """Publish the static content to Github Pages"""
