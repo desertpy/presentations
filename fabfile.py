@@ -22,7 +22,6 @@ def build():
 
     # Setup build directory
     local("mkdir -p output")
-    local("echo presentations.desertpy.com > output/CNAME")
 
     # Fabric by godber
     local("mkdir -p output/fabric-godber")
