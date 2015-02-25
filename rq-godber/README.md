@@ -3,6 +3,11 @@
 * Install Docker
 * Create Python 2.7 Virtual Environment
 * pip install -r requirements.txt
+* link godber/flask-demo to flask-demo in this directory
+* checkout godber/rq-dashboard and then run:
+
+    docker build -t rq-dashboard .
+
 * Start all the docker containers with: `docker-compose up`
 
 You should now have three docker containers running:
