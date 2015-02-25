@@ -4,7 +4,7 @@ rqworker:
     - rqredis
   command: rqworker -u redis://rqredis:6379/
 rqdashboard:
-  image: rq-dashboard:latest
+  image: godber/rq-dashboard:latest
   ports:
     - 9181:9181
   links:
@@ -16,7 +16,7 @@ rqredis:
   ports:
     - "6379:6379"
 flaskdemo:
-  build: flask-demo
+  image: godber/flask-demo:latest
   links:
     - rqredis
   ports:

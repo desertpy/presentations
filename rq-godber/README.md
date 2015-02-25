@@ -3,11 +3,6 @@
 * Install Docker
 * Create Python 2.7 Virtual Environment
 * pip install -r requirements.txt
-* link godber/flask-demo to flask-demo in this directory
-* checkout godber/rq-dashboard and then run:
-
-    docker build -t rq-dashboard .
-
 * Start all the docker containers with: `docker-compose up`
 
 You should now have three docker containers running:
@@ -24,12 +19,16 @@ exposed):
 
 You can now queue the simple test RQ job by running
 
-  python ./rq1.py http://uberhip.com
+```
+python ./rq1.py http://uberhip.com
+```
 
 You can scale up the number of running workers to three by running the
 following command:
 
-  docker-compose scale rqworker=3
+```
+docker-compose scale rqworker=3
+```
 
 This will result in two new worker containers being started.
 
@@ -40,12 +39,22 @@ docker is running in a linux virtual machine and needs to be accessed
 using that virtual machines IP address.  The IP address can be obtained
 by running the following command:
 
-  boot2docker ip
+```
+boot2docker ip
+```
 
 So RQ commands will need to be called with the properl redis URL, for
 example:
 
-  rqinfo -u redis://192.168.59.103:6379/
+```
+rqinfo -u redis://192.168.59.103:6379/
+python ./rq1a.py http://uberhip.com 192.168.59.103
+```
+
+The web applications will then be accessible at the following locations:
+
+* http://192.168.59.103:9181/ - The RQ Web Dashboard
+* redis://192.168.59.103:6379/ - Redis server
 
 # Notes on RQ
 
