@@ -15,3 +15,9 @@ rqredis:
   command: redis-server --appendonly yes
   ports:
     - "6379:6379"
+flaskdemo:
+  build: flask-demo
+  links:
+    - rqredis
+  ports:
+    - "5000:5000"
