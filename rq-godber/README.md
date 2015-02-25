@@ -21,6 +21,17 @@ You can now queue the simple test RQ job by running
 
   python ./rq1.py http://uberhip.com
 
+Note to OS X users, your docker container won't be running on localhost,
+docker is running in a linux virtual machine and needs to be accessed
+using that virtual machines IP address.  The IP address can be obtained
+by running the following command:
+
+  boot2docker ip
+
+So RQ commands will need to be called with the properl redis URL, for
+example:
+
+  rqinfo -u redis://192.168.59.103:6379/
 
 # Notes on RQ
 
