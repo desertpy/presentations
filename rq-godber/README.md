@@ -21,6 +21,12 @@ You can now queue the simple test RQ job by running
 
   python ./rq1.py http://uberhip.com
 
+You can scale up the number of running workers to three by running the
+following command:
+
+  docker-compose scale rqworker=3
+
+This will result in two new worker containers being started.
 
 # Notes on RQ
 
