@@ -7,7 +7,7 @@ docker-py==0.7.2
 dockerpty==0.3.2
 docopt==0.6.2
 redis==2.10.3
-requests==2.5.1
+requests==2.4.3
 rq==0.5.0
 six==1.9.0
 texttable==0.8.2
