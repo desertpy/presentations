@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>ANTLR4 and Python</title>
+                <base href="https://ianpreston.io/talks/a4talk/">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+        <style type="text/css">
+        .slides section { text-align: left; }
+        .slides pre { box-shadow: none; }
+        ::selection { background-color: #FF0000; }
+        </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<section>
+	<h2>ANTLR4 and Python</h2>
+    <br><br>
+	<p>DesertPy 2014-11-19</p>
+    <br>
+    <p>Ian Preston (github: ianpreston)</p>
+</section>
+
+<section>
+	<h3>What is ANTLR4?</h3>
+    <ul>
+        <li style="padding-bottom: 20px;">It's a modern compiler compiler. It generates tokenizers and LL (well, kinda) parsers from EBNF-like grammar.</li>
+        <li style="padding-bottom: 20px;">Parsers build a concrete syntax tree (parse tree) with an Observer or Visitor interface. No inline code within the grammar!</li>
+        <li style="padding-bottom: 20px;">Supports automatic rewriting of left recursive rules.</li>
+        <li style="padding-bottom: 20px;">Runtimes for Java, C#, and Python (2 and 3).</li>
+        <li>BSD License.</li>
+    </ul>
+</section>
+<section>
+    <h3>Example: Grammar</h3>
+    <pre><code data-trim class="bnf">
+grammar Ex;
+
+expr
+    : expr ('+'|'-') expr
+    | expr ('*'|'/') expr
+    | '(' expr ')'
+    | const
+    ;
+const: NUM;
+
+NUM: ([0-9]+);
+WS: ([\n\t\r ]+) -&gt; skip;
+    </pre></code>
+</section>
+
+<section>
+    <h3>Example: Generate</h3>
+    Install ANTLR
+    <pre><code data-trim class="bash">
+$ cd opt &amp;&amp; curl -O http://www.antlr.org/download/antlr-4.4-complete.jar
+$ alias antlr4='java -jar /opt/antlr-4.4-complete.jar'
+    </code></pre>
+    Generate a lexer and parser from our grammar
+    <pre><code data-trim class="bash">
+$ antlr Ex.g4 -o build -Dlanguage=Python2
+$ ls build/
+Ex.tokens   ExLexer.py  ExLexer.tokens  ExListener.py   ExParser.py
+    </code></pre>
+</section>
+
+<section>
+    <h3>Example: Observer</h3>
+    <ul>
+        <li>Rather than embedding code in the grammar, ANTLR gives you an observer interface to the parse tree.</li>
+        <li>As the tree is traversed, the observer (called a Listener) is notified.</li>
+    </ul>
+    <pre>
+    <code data-trim class="python">
+class ExListener(ParseTreeListener):
+    def enterExpr(self, ctx):
+        pass
+    def exitExpr(self, ctx):
+        pass
+    def enterConst(self, ctx):
+        pass
+    # ... etc ...
+    </code>
+    </pre>
+</section>
+
+<section>
+    <h3>Example: Observer</h3>
+    <pre><code data-trim class="python">
+class FooListener(ExListener):
+    def __init__(self):
+        super(FooListener, self).__init__()
+        self.indent = 0
+
+    def enterExpr(self, ctx):
+        print ' ' * self.indent,
+        print 'expr:', ctx.getText()
+        self.indent += 1
+
+    def exitExpr(self, ctx):
+        self.indent -= 1
+
+    def enterConst(self, ctx):
+        print ' ' * self.indent,
+        print 'const:', ctx.NUM().getText()
+    </code></pre>
+</section>
+
+<section>
+    <h3>Example: Entry point</h3>
+    <pre><code data-trim class="python">
+# main.py
+import antlr4
+import ...
+
+class FooListener(ExListener):
+    ...
+
+if __name__ == '__main__':
+    input_stream = antlr4.FileStream(sys.argv[1])
+    
+    # Instantiate an run generated lexer
+    lexer = ExLexer(input_stream)
+    tokens = antlr4.CommonTokenStream(lexer)
+    
+    # Instantiate and run generated parser
+    parser = ExParser(tokens)
+    parse_tree = parser.expr()
+    
+    # Traverse the parse tree with our FooListener
+    listener = FooListener()
+    walker = antlr4.ParseTreeWalker()
+    walker.walk(listener, parse_tree)
+    </code></pre>
+</section>
+
+<section>
+    <h3>Example: Output</h3>
+    <pre><code data-trim class="bash">
+$ cat test.expr
+0 + (1337 + (42 * 10))
+    </code></pre>
+    <pre><code data-trim class="bash">
+$ python main.py test.expr
+ expr: 0+(1337+(42*10))
+   expr: 0
+     const: 0
+   expr: (1337+(42*10))
+     expr: 1337+(42*10)
+       expr: 1337
+         const: 1337
+       expr: (42*10)
+         expr: 42*10
+           expr: 42
+             const: 42
+           expr: 10
+             const: 10
+    </code></pre>
+</section>
+<section>
+    <h3>Links</h3>
+    <ul>
+        <li>Homepage - <a href="http://antlr.org/">antlr.org</a></li>
+        <li>Example source - <a href="https://github.com/ianpreston/antlrdemo">github.com/ianpreston/antlrdemo</a></li>
+        <li>Python docs - <a href="https://theantlrguy.atlassian.net/wiki/display/ANTLR4/Python+Target">theantlrguy.atlassian.net/wiki/display/ANTLR4/Python+Target</a></li>
+        <li>ALL(*) paper -<a href="http://www.antlr.org/papers/allstar-techreport.pdf">antlr.org/papers/allstar-techreport.pdf</a></li>
+    </ul>                                                                                 
+</section>                                                                                
+            </div>                                                                        
+        </div>                                                                            
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>                                          
+		<script>                                                                          
+                                                                                          
+			// Full list of configuration options available here:                         
+			// https://github.com/hakimel/reveal.js#configuration                         
+			Reveal.initialize({                                                           
+				controls: true,                                                           
+				progress: true,                                                          
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+    </body>
+</html>

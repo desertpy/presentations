@@ -1,0 +1,23 @@
+rqworker:
+  build: .
+  links:
+    - rqredis
+  command: rqworker -u redis://rqredis:6379/
+rqdashboard:
+  image: godber/rq-dashboard:latest
+  ports:
+    - 9181:9181
+  links:
+    - rqredis
+  command: rq-dashboard -H rqredis
+rqredis:
+  image: redis:2.8
+  command: redis-server --appendonly yes
+  ports:
+    - "6379:6379"
+flaskdemo:
+  image: godber/flask-demo:latest
+  links:
+    - rqredis
+  ports:
+    - "5000:5000"
