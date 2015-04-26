@@ -85,6 +85,10 @@ def build():
     local("cp -r queue-battle output")
     local("cp -r rq-godber output")
 
+    # Adding Michael's GUI talk
+    local("cp -r GUI_Programming_Wx_and_Kivy-Michael output")
+
+
 def publish():
     """Publish the static content to Github Pages"""
     local("ghp-import -p output/")
