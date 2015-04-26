@@ -82,6 +82,9 @@ def build():
     local("cp -r antlr-preston output")
     local("cp -r pandas-intro-godber-jan-2014 output")
 
+    # Adding Michael's GUI talk
+    local("cp -r GUI_Programming_Wx_and_Kivy-Michael output")
+
 def publish():
     """Publish the static content to Github Pages"""
     local("ghp-import -p output/")
