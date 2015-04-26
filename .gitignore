@@ -36,3 +36,5 @@ nosetests.xml
 
 # Custom additions
 output
+
+.ipynb_checkpoints
