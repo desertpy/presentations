@@ -82,6 +82,9 @@ def build():
     local("cp -r antlr-preston output")
     local("cp -r pandas-intro-godber-jan-2014 output")
 
+    local("cp -r queue-battle output")
+    local("cp -r rq-godber output")
+
 def publish():
     """Publish the static content to Github Pages"""
     local("ghp-import -p output/")
