@@ -1,0 +1,321 @@
+NAME                        = ATM
+COLUMNS                     = 13
+ROW_BYTES                   = 130
+INTERCHANGE_FORMAT          = BINARY
+PRIMARY_KEY                 = ( "SPACECRAFT_CLOCK_START_COUNT" )
+DESCRIPTION                 = "
+
+   The ATM table contains temperature profiles, aerosol opacities, and
+   related elements derived from the TES calibrated data.  Derived values
+   are based on the average spectra of all six detectors measured while TES
+   is operating in the nadir observation mode.  Only data with the following
+   quality flags are included for atmospheric evaluation: 
+   RAD.QUALITY:MAJOR_PHASE_INVERSION = 0;
+   RAD.QUALITY:SPECTROMETER_NOISE = 0-1; 
+   RAD.QUALITY:DETECTOR_MASK_PROBLEM = 0.  
+   Observations that target a body other than Mars (e.g., Phobos and 
+   Deimos), or do not include Mars in the field of view, do not have 
+   correlating data in this table.  
+
+   The ATM:QUALITY product contains information on the quality of the
+   calculated quantities (see DOCUMENT/QUALITY.TXT for more information).
+   Users should also be aware of the following data quality issues:
+
+     Significant problems in temperature retrieval are known to occur over 
+     topographic highs, e.g., the Tharsis volcanos.  Over regions of high 
+     surface temperature, retrieved atmospheric temperatures in the lowest 
+     scale height may be inaccurate.  However, large RMS radiance residuals 
+     (TEMPERATURE_PROFILE_RESIDUAL) usually occur in these cases.  
+
+     TES collects data in either of two spectral resolution modes: 'double
+     scan' and 'single scan' (see DATA/WAVNUMDS.TAB and DATA/WAVNUMSS.TAB
+     for specific wavenumbers).  We have observed that the RMS radiance
+     residual values (TEMPERATURE_PROFILE_RESIDUAL) associated with the
+     double scan mode temperature profiles are higher than those associated
+     with the single scan mode data.  However, there appears to be no bias
+     or other distortion present in the two sets of profiles that is 
+     outside of the expected temperature uncertainty of ~2K.
+
+     Negative dust and water ice opacity values (NADIR_OPACITY[1:2]) are
+     known to exist even for data with a QUALITY:ATM_OPACITY_RATING equal
+     to zero.  The estimated uncertainty for any one retrieval of aerosol 
+     optical depth is about +/- 0.05. Therefore, we have chosen to include 
+     all retrieved NADIR_OPACITY[1:2] values greater than -0.05. A retrieved
+     optical depth in the range 0 to -0.05 is consistent with an actual 
+     optical depth of zero.  Additionally, we require that the retrieved 
+     CO2 optical depth (NADIR_OPACITY[3]) be in the range -0.01 to 0.05 for
+     QUALITY:ATM_OPACITY_RATING to be zero. A retrieved CO2 optical depth 
+     greater than 0.05 is unphysical and an optical depth in the range 0 to
+     -0.01 is consistent with zero. No constraints or quality checks are 
+     make for the basalt surface component (NADIR_OPACITY[4]).
+
+     The opacity algorithm fails when the thermal contrast between the
+     atmosphere and the ground is too small.  Experience indicates that
+     results may be unreliable if the surface temperature drops below about
+     220K.  We suggest that opacity users limit their searches to include
+     only those values for which the CO2_CONTINUUM_TEMP is greater than 
+     220K, and the quality bits QUALITY:TEMPERATURE_PROFILE_RATING and
+     QUALITY:ATMOSPHERIC_OPACITY_RATING are both equal to zero.
+
+   Further discussion of the values in this table is available in
+   DOCUMENT/PROCESS; questions about the content of the data should be 
+   directed to Michael Smith at Michael.D.Smith@gsfc.nasa.gov or John
+   Pearl at John.Pearl@gsfc.nasa.gov."
+   
+
+OBJECT                      = COLUMN
+    NAME                    = SPACECRAFT_CLOCK_START_COUNT
+    DATA_TYPE               = MSB_UNSIGNED_INTEGER
+    START_BYTE              = 1
+    BYTES                   = 4
+    ALIAS_NAME              = sclk_time
+    DESCRIPTION             = "The value of the spacecraft clock at the 
+                               beginning of the observation"
+END_OBJECT                  = COLUMN
+
+OBJECT                      = COLUMN
+    NAME                    = SURFACE_PRESSURE
+    DATA_TYPE               = MSB_UNSIGNED_INTEGER
+    START_BYTE              = 5
+    BYTES                   = 2
+    SCALING_FACTOR          = 0.001
+    NOT_APPLICABLE_CONSTANT = 444.4
+    ALIAS_NAME              = srf_pressure
+    DESCRIPTION             = "Surface pressure is calculated from the 
+                               altitudes given by the MGS-Mars Orbiter Laser 
+                               Altimeter (MOLA) 1/4 degree x 1/4 degree 
+                               topographic map, the hydrostatic law assuming 
+                               a 10 km scale height, and an adjustment for 
+                               the seasonal CO2 sublimation cycle.  
+                               Proper normalization is obtained by fitting 
+                               the pressures observed by the Viking and
+                               Pathfinder landers.  
+                               For more information, see DOCUMENT/PROCESS."
+    UNIT                    = "mbar x1000"
+END_OBJECT                  = COLUMN
+
+OBJECT                      = COLUMN
+    NAME                    = NADIR_TEMPERATURE_PROFILE
+    DATA_TYPE               = MSB_UNSIGNED_INTEGER
+    START_BYTE              = 7
+    BYTES                   = 76
+    ITEMS                   = 38
+    ITEM_BYTES              = 2
+    SCALING_FACTOR          = 0.01
+    NOT_APPLICABLE_CONSTANT = 444.4
+    ALIAS_NAME              = nadir_pt
+    DESCRIPTION             = "Array of temperatures from nadir observations 
+                               corresponding to the 38 atmopsheric pressure 
+                               levels, given in millibars, shown below.  The 
+                               fill value (NOT_APPLICABLE_CONSTANT) is 
+                               inserted when (1) the temperature retrieval 
+                               fails, or (2) the pressure either exceeds the 
+                               local surface pressure, or is less than 0.1 
+                               mbar.
+                                 1: 16.5815200
+                                 2: 12.9137000
+                                 3: 10.0572000
+                                 4:  7.8325550
+                                 5:  6.1000000
+                                 6:  4.7506850
+                                 7:  3.6998370
+                                 8:  2.8814360
+                                 9:  2.2440650
+                                10:  1.7476790
+                                11:  1.3610940
+                                12:  1.0600210
+                                13:  0.8255452
+                                14:  0.6429352
+                                15:  0.5007185
+                                16:  0.3899599
+                                17:  0.3037011
+                                18:  0.2365227
+                                19:  0.1842040
+                                20:  0.1434582
+                                21:  0.1117254
+                                22:  0.0870000
+                                23:  0.0678000
+                                24:  0.0528000
+                                25:  0.0411000
+                                26:  0.0320000
+                                27:  0.0249000
+                                28:  0.0194000
+                                29:  0.0151000
+                                30:  0.0118000
+                                31:  0.0091700
+                                32:  0.0071400
+                                33:  0.0055600
+                                34:  0.0043300
+                                35:  0.0033700
+                                36:  0.0026300
+                                37:  0.0020500
+                                38:  0.0015900"
+    UNIT                    = "degK x100"
+END_OBJECT                  = COLUMN
+
+OBJECT                      = COLUMN
+    NAME                    = CO2_CONTINUUM_TEMP
+    DATA_TYPE               = MSB_UNSIGNED_INTEGER
+    START_BYTE              = 83
+    BYTES                   = 2
+    SCALING_FACTOR          = 0.01
+    ALIAS_NAME              = co2_cont_temp
+    DESCRIPTION             = "Mean of brightness temperature just outside 
+                               the wings of the 667 cm-1 CO2 absorption band.
+                               For 10 cm-1 and 5 cm-1 data, all wavenumbers 
+                               between 508 to 531 cm-1 and 805 to 827 cm-1 
+                               are used with a total of 6 and 10 wavenumbers 
+                               used in the calculation, respectively."
+    UNIT                    = "degK x100"
+END_OBJECT                  = COLUMN
+
+OBJECT                      = COLUMN
+    NAME                    = SPECTRAL_SURFACE_TEMPERATURE
+    DATA_TYPE               = MSB_UNSIGNED_INTEGER
+    START_BYTE              = 85
+    BYTES                   = 2
+    UNIT                    = "degK x100"
+    SCALING_FACTOR          = 0.01
+    ALIAS_NAME              = srf_temp_est
+    DESCRIPTION             = "Mean of derived temperatures for each detector
+                               of the observed target."
+END_OBJECT                  = COLUMN
+
+OBJECT                      = COLUMN
+    NAME                    = TEMPERATURE_PROFILE_RESIDUAL
+    DATA_TYPE               = IEEE_REAL
+    START_BYTE              = 87
+    BYTES                   = 4
+    NOT_APPLICABLE_CONSTANT = 444.4
+    ALIAS_NAME              = rms_pt
+    DESCRIPTION             = "RMS difference between radiances measured 
+                               within the 667 cm-1 CO2 band, and the 
+                               radiances calculated within that band using 
+                               the derived pressure- temperature profile."
+    UNIT                    =  "watts cm-2 steradian-1 wavenumber-1"
+END_OBJECT                  = COLUMN
+
+OBJECT                      = COLUMN
+    NAME                    = NADIR_OPACITY
+    DATA_TYPE               = MSB_INTEGER
+    START_BYTE              = 91
+    BYTES                   = 18
+    ITEMS                   = 9
+    ITEM_BYTES              = 2
+    SCALING_FACTOR          = 0.001
+    NOT_APPLICABLE_CONSTANT = 22.22
+    ALIAS_NAME              = best_fit_opacities
+    DESCRIPTION             = "Array of scaling factors that when multiplied 
+                               by standard spectral shapes gives a best fit 
+                               for aerosol opacities, CO2 hot and isotope 
+                               bands, and a reference surface spectral 
+                               emissivity.  The standard spectral shapes are 
+                               archived in DATA/STDSHAPES.TAB.
+                               Spectral shapes represented in array elements:
+                                 1: dust
+                                 2: water ice
+                                 3: CO2 hot and isotope bands
+                                 4: surface
+                                 5-9: not used"
+END_OBJECT                  = COLUMN
+
+OBJECT                      = COLUMN
+    NAME                    = NADIR_OPACITY_RESIDUAL
+    DATA_TYPE               = IEEE_REAL
+    START_BYTE              = 109
+    BYTES                   = 4
+    NOT_APPLICABLE_CONSTANT = 444.4
+    ALIAS_NAME              = rms_opacities
+    DESCRIPTION             = "RMS opacity residual between the observed 
+                               radiance spectrum and the radiance spectrum 
+                               computed using the best-fit opacity scaling 
+                               factors."
+    UNIT                    =  "1e-8 watts cm-2 steradian-1 wavenumber-1"
+END_OBJECT                  = COLUMN
+
+OBJECT                      = COLUMN
+    NAME                    = CO2_DOWNWELLING_FLUX
+    DATA_TYPE               = IEEE_REAL
+    START_BYTE              = 113
+    BYTES                   = 4
+    NOT_APPLICABLE_CONSTANT = 444.4
+    ALIAS_NAME              = co2_dw_flux
+    DESCRIPTION             = "Down-welling flux from 667 cm-1 CO2 band."
+    UNIT                    = "watts cm-2"
+END_OBJECT                  = COLUMN
+
+OBJECT                      = COLUMN
+    NAME                    = TOTAL_DOWNWELLING_FLUX
+    DATA_TYPE               = IEEE_REAL
+    START_BYTE              = 117
+    BYTES                   = 4
+    NOT_APPLICABLE_CONSTANT = 444.4
+    ALIAS_NAME              = total_dw_flux
+    DESCRIPTION             = "Down-welling flux from CO2 and atmospheric 
+                               aerosols."
+    UNIT                    = "watts cm-2"
+END_OBJECT                  = COLUMN
+
+OBJECT                      = COLUMN
+    NAME                    = QUALITY
+    DATA_TYPE               = MSB_BIT_STRING
+    START_BYTE              = 121
+    BYTES                   = 2
+    ALIAS_NAME              = quality
+    DESCRIPTION             = "16-bit atmosphere quality word.  Bit column
+                               description and code definitions follow; see 
+                               also quality.txt for more information"
+
+  OBJECT                       = BIT_COLUMN
+     NAME                      = TEMPERATURE_PROFILE_RATING
+     BIT_DATA_TYPE             = MSB_UNSIGNED_INTEGER
+     START_BIT                 = 1
+     BITS                      = 2
+     ALIAS_NAME                = atm_pt_rating
+     DESCRIPTION               = "Identifies quality of nadir pressure-
+                                  temperature profile values:
+                                   0 = nadir values are good
+                                   1 = nadir values are questionable
+                                   2 = nadir values are bad
+                                   3 = nadir values are not available (N/A)"
+  END_OBJECT                   = BIT_COLUMN
+
+  OBJECT                       = BIT_COLUMN
+     NAME                      = ATMOSPHERIC_OPACITY_RATING
+     BIT_DATA_TYPE             = MSB_UNSIGNED_INTEGER
+     START_BIT                 = 3
+     BITS                      = 2
+     ALIAS_NAME                = atm_opacity_rating
+     DESCRIPTION               = "Identifies quality of opacity values:
+                                 0 = opacity values are good
+                                 1 = opacity values are questionable
+                                 2 = opacity values are bad
+                                 3 = opacity values are not available (N/A)"
+  END_OBJECT                  = BIT_COLUMN
+
+END_OBJECT                  = COLUMN
+
+OBJECT                      = COLUMN
+    NAME                    = SURFACE_RADIANCE    
+    DATA_TYPE               = MSB_INTEGER
+    START_BYTE              = 123
+    BYTES                   = 4
+    VAR_DATA_TYPE           = MSB_INTEGER
+    VAR_ITEM_BYTES          = 2
+    VAR_RECORD_TYPE         = Q15
+    ALIAS_NAME              = srf_radiance
+    DESCRIPTION             = "Derived surface radiance;
+                               this field is not used in this release."
+    UNIT                    = "watts cm-2 steradian-1 wavenumber-1"
+END_OBJECT                  = COLUMN
+
+OBJECT                      = COLUMN
+    NAME                    = ATMOSPHERIC_CALIBRATION_ID
+    DATA_TYPE               = CHARACTER
+    START_BYTE              = 127
+    BYTES                   = 4
+    ALIAS_NAME              = version_id
+    DESCRIPTION             = "Version ID of nadir temperature and aerosol
+                               retrieval algorithm." 
+END_OBJECT                  = COLUMN
+
