@@ -88,6 +88,12 @@ def build():
     # Adding Michael's GUI talk
     local("cp -r GUI_Programming_Wx_and_Kivy-Michael output")
 
+    # Adding Michael's Pyinstaller talk
+    local("cp -r Pyinstaller_Frozen_Binaries-Michael output")
+
+    # Adding Michael's Win32com talk
+    local("cp -r Win32com_Automating_Outlook-Michael output")
+
 
 def publish():
     """Publish the static content to Github Pages"""
