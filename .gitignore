@@ -3,6 +3,9 @@
 # C extensions
 *.so
 
+# MAC OSX files
+.DS_Store
+
 # Packages
 *.egg
 *.egg-info
