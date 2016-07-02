@@ -94,6 +94,9 @@ def build():
     # Adding Michael's Win32com talk
     local("cp -r Win32com_Automating_Outlook-Michael output")
 
+    # Adding Michael's SQLAlchemy & Pycon 2016 talk
+    local("cp -r SQLAlchemy_and_Pycon_2016_update-Michael output")
+
 
 def publish():
     """Publish the static content to Github Pages"""
