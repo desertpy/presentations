@@ -67,6 +67,7 @@ dependencies:
 - odo=0.5.0=py35_1
 - openssl=1.0.2j=0
 - pandas=0.19.1=np111py35_0
+- pandas-datareader=0.2.1=py35_0
 - partd=0.3.6=py35_0
 - path.py=8.2.1=py35_0
 - patsy=0.4.1=py35_0
@@ -78,12 +79,14 @@ dependencies:
 - prompt_toolkit=1.0.9=py35_0
 - psutil=5.0.1=py35_0
 - ptyprocess=0.5.1=py35_0
+- py=1.4.31=py35_0
 - pyflakes=1.3.0=py35_0
 - pygments=2.1.3=py35_0
 - pylint=1.5.4=py35_1
 - pyparsing=2.1.4=py35_0
 - pyqt=5.6.0=py35_1
 - pytables=3.3.0=np111py35_0
+- pytest=3.0.5=py35_0
 - python=3.5.2=0
 - python-dateutil=2.6.0=py35_0
 - python.app=1.2=py35_4
@@ -96,6 +99,7 @@ dependencies:
 - qtpy=1.1.2=py35_0
 - readline=6.2=2
 - requests=2.12.4=py35_0
+- requests-file=1.4.1=py35_0
 - rope=0.9.4=py35_1
 - scikit-image=0.12.3=np111py35_1
 - scikit-learn=0.18.1=np111py35_0
@@ -121,7 +125,7 @@ dependencies:
 - wheel=0.29.0=py35_0
 - widgetsnbextension=1.2.6=py35_0
 - wrapt=1.10.8=py35_0
-- xz=5.2.2=0
+- xz=5.2.2=1
 - yaml=0.1.6=0
 - zlib=1.2.8=3
 - pip:
