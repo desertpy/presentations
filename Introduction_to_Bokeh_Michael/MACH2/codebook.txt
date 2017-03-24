@@ -1,0 +1,48 @@
+The following items were rated on a likert scale where 1 = strongly disagre 2= disagree 3=neutral 4=agree 5=strongly agree (0=they skipped):
+
+Q1. Never tell anyone the real reason you did something unless it is useful to do so.
+Q2. The best way to handle people is to tell them what they want to hear.
+Q3. One should take action only when sure it is morally right.
+Q4. Most people are basically good and kind.
+Q5. It is safest to assume that all people have a vicious streak and it will come out when they are given a chance.
+Q6. Honesty is the best policy in all cases.
+Q7. There is no excuse for lying to someone else.
+Q8. Generally speaking, people won't work hard unless they're forced to do so.
+Q9. All in all, it is better to be humble and honest than to be important and dishonest.
+Q10. When you ask someone to do something for you, it is best to give the real reasons for wanting it rather than giving reasons which carry more weight.
+Q11. Most people who get ahead in the world lead clean, moral lives.
+Q12. Anyone who completely trusts anyone else is asking for trouble.
+Q13. The biggest difference between most criminals and other people is that the criminals are stupid enough to get caught.
+Q14. Most people are brave.
+Q15. It is wise to flatter important people.
+Q16. It is possible to be good in all respects.
+Q17. P.T. Barnum was wrong when he said that there's a sucker born every minute.
+Q18. It is hard to get ahead without cutting corners here and there.
+Q19. People suffering from incurable diseases should have the choice of being put painlessly to death.
+Q20. Most people forget more easily the death of their parents than the loss of their property.
+
+gender. chosen from a drop down list (1=male, 2=female, 3=other; 0 =no answer)
+age. Entered into a text field (ages<18 removed from dataset)
+
+-- CALCULATED VALUES --
+time_elapsed = (submit time)-(load time) in seconds.
+score. = $_POST['Q1']
+			   + $_POST['Q2']
+			   + (6-$_POST['Q3'])
+			   + (6-$_POST['Q4'])
+			   + $_POST['Q5']
+			   + (6-$_POST['Q6'])
+			   + (6-$_POST['Q7'])
+			   + $_POST['Q8']
+			   + (6-$_POST['Q9'])
+			   + (6-$_POST['Q10'])
+			   + (6-$_POST['Q11'])
+			   + $_POST['Q12']
+			   + $_POST['Q13']
+			   + (6-$_POST['Q14'])
+			   + $_POST['Q15']
+			   + (6-$_POST['Q16'])
+			   + $_POST['Q17']
+			   + $_POST['Q18']
+			   + $_POST['Q19']
+			   + $_POST['Q20'];
