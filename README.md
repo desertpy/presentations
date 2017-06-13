@@ -8,7 +8,7 @@ can be found online on the
 Creating a Presentation
 -----------------------
 
-If want to give a presentation you may use our format, which currently
+If you want to give a presentation you may use our format, which currently
 uses [landslide](https://github.com/adamzap/landslide).  Landslide
 supports presentations written in Markdown or Restructured Text and
 generates a decent HTML5 style slideshow.  Support for other presentation
