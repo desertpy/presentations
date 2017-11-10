@@ -41,3 +41,4 @@ nosetests.xml
 output
 
 .ipynb_checkpoints
+.cache
