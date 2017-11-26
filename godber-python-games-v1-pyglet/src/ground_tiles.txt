@@ -1,0 +1,9 @@
+https://opengameart.org/content/grass-land-tiles
+
+Grassy tiles I created for our game in GGJ 2016.
+
+Variations of same tiles are added to break monotonicity. There are empty areas, a trap, bush, rock and tree to create mazes.
+
+You can use it with license conditions CC-BY-SA 3.0.
+
+Copyright/Attribution Notice: "Gokhan Solak"
