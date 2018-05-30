@@ -8,6 +8,6 @@
 These will need to be downloaded and played with iTunes or another mp3
 player, your browser will probably not play these directly.
 
-* [Brass Pad Example.mp3](Brass Pad Example.mp3)
-* [Poly Org example.mp3](Poly Org example.mp3)
-* [amp perc organ example.mp3](amp perc organ example.mp3)
+* [Brass Pad Example.mp3](./Brass Pad Example.mp3)
+* [Poly Org example.mp3](./Poly Org example.mp3)
+* [amp perc organ example.mp3](./amp perc organ example.mp3)
