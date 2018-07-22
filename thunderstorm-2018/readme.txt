@@ -1,0 +1,1 @@
+Lightning talks for "thunderstorm" DesertPy Meetup on July 24th, 2018.
