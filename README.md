@@ -31,5 +31,3 @@ presentation site.
 * make virtual env with requirements.txt
 * TODO: build with `fab build` (only builds my presentation so far)
 * publish to gh-pages branch with `fab publish`
-
-
