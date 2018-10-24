@@ -8,7 +8,7 @@ of this presentation, here's what I did:
 ```bash
 mkvirtualenv -p `which python3` airflow
 export SLUGIFY_USES_TEXT_UNIDECODE=yes
-pip3 install apache-airflow[mysql,redis,slack,crypto,password,ssh]
+pip install apache-airflow[mysql,redis,slack,crypto,password,ssh]
 airflow initdb
 # set host to 127.0.0.1 and use SSH tunneling for access
 sed -i 's/^web_server_host.*$/web_server_host = 127.0.0.1/' airflow.cfg
