@@ -19,5 +19,13 @@ else
   tmux send-keys 'sleep 10; bin/kafka-server-start.sh config/server.properties' C-m
   tmux rename-window 'kafka'
 
+  tmux new-window
+  tmux send-keys 'sleep 15' C-m
+  tmux send-keys 'bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic testTopic' C-m
+  tmux send-keys 'cd ../..' C-m
+  tmux send-keys '#./fake_stream.sh temp/2016.csv' C-m
+  tmux rename-window 'fake_stream'
+
+
   tmux -2 attach-session -t $SESSION
 fi

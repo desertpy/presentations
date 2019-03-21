@@ -28,7 +28,4 @@ case "$(uname -s)" in
         ;;
 esac
 
-# ${splitCmd} -l 10 --filter 'dd 2> /dev/null; sleep 10' $infile
-# ${splitCmd} -l 10 --filter 'dd 2> /dev/null | kafkacat -P -b localhost -t ${topic} ; sleep 10' $infile
-# echo ${splitCmd} -l ${LINES} --filter "kafkacat -P -b localhost -t ${TOPIC} ; sleep 10" ${INFILE}
-${splitCmd} -l ${LINES} --filter "kafkacat -P -b localhost -t ${TOPIC} -z snappy; sleep 1" ${INFILE}
+${splitCmd} -l ${LINES} --filter "kafkacat -P -b localhost -t ${TOPIC}; sleep 1; echo -n ." ${INFILE}
