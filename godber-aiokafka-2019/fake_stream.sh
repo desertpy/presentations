@@ -2,7 +2,7 @@
 
 # This script is intended to emulate a bursty stream writing
 # to kafka using kafkacat.  It should be called like:
-#     fake_stream.sh temp/2016.csv [testTopic]
+#     fake_stream.sh temp/noaa-2016-sorted.json [testTopic]
 
 LINES=500
 INFILE=$1
@@ -12,7 +12,7 @@ if [ -z "$1" ]
   then
     echo "No INFILE argument supplied"
     echo
-    echo "Usage: fake_stream.sh temp/2016.csv [testTopic]"
+    echo "Usage: fake_stream.sh temp/noaa-2016-sorted.json [testTopic]"
     exit 1
 fi
 

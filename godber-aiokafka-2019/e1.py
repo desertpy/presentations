@@ -7,8 +7,9 @@ loop = asyncio.get_event_loop()
 
 async def consume():
     consumer = AIOKafkaConsumer(
-        'testTopic',
-        loop=loop, bootstrap_servers='localhost:9092',
+        'noaa-csv-raw',
+        loop=loop,
+        bootstrap_servers='localhost:9092',
         group_id="e1-group-v1")
     # Get cluster layout and join group `my-group`
     await consumer.start()

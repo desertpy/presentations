@@ -20,10 +20,12 @@ else
   tmux rename-window 'kafka'
 
   tmux new-window
+  tmux send-keys 'echo "Waiting for Kafka to start up."' C-m
   tmux send-keys 'sleep 15' C-m
-  tmux send-keys 'bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic testTopic' C-m
+  tmux send-keys 'bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-json' C-m
+  tmux send-keys 'bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-json-us-az' C-m
   tmux send-keys 'cd ../..' C-m
-  tmux send-keys '#./fake_stream.sh temp/2016.csv' C-m
+  tmux send-keys '#./fake_stream.sh temp/noaa-2016-sorted.json noaa-json' C-m
   tmux rename-window 'fake_stream'
 
 
