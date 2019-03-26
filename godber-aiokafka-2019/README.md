@@ -77,6 +77,7 @@ Create `noaa-csv-raw` with 5 partitions
 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-csv-raw
 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-json
 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-json-us-az
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-json-alerts
 ```
 
 Check topic, it should have 5 partitions:
