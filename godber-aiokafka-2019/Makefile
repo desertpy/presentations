@@ -23,16 +23,16 @@ temp/kafka_2.12-2.1.1: temp/kafka_2.12-2.1.1.tgz
 temp/kafka_2.12-2.1.1.tgz: temp
 	wget -P temp/ -nc http://apache.cs.utah.edu/kafka/2.1.1/kafka_2.12-2.1.1.tgz
 
-temp/noaa-2016-sorted.json:
-	echo "This step requires lots of memory or will take a long time"
+temp/noaa-2016-sorted.json: temp/noaa-2016.json
+	@echo "This step requires lots of memory or will take a long time"
 	jq -s 'sort_by(.date) | .[]' -c temp/noaa-2016.json  > temp/noaa-2016-sorted.json
 
 temp/noaa-2016.json: temp/2016-sorted.csv temp/ghcnd-stations.txt temp/ghcnd-countries.txt temp/ghcnd-states.txt
-	echo "This step requires lots of memory or will take a long time"
-	cd temp; python3 ../process.py
+	@echo "This step requires lots of memory or will take a long time"
+	cd temp; python3 ../process.py; mv documents.json noaa-2016.json
 
 temp/2016-sorted.csv: temp/2016.csv
-	echo "This step requires lots of memory or will take a long time"
+	@echo "This step requires lots of memory or will take a long time"
 	sort --field-separator=',' --key=1,2 -o temp/2016-sorted.csv temp/2016.csv
 
 temp/2016.csv: temp/2016.csv.gz
