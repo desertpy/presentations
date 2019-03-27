@@ -3,6 +3,9 @@
 # process the csv file into Elasticsearch json documents
 #
 ####################################################################
+#
+# Copied from https://github.com/elastic/rally-tracks/blob/master/noaa/_tools/process.py
+#
 
 import os
 import csv

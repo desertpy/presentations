@@ -62,7 +62,7 @@ https://github.com/elastic/rally-tracks/blob/master/noaa/_tools/process.py
 Get kafka and the data files:
 
 ```
-make
+make all
 ```
 
 Start Zookeeper and Kafka
@@ -71,14 +71,6 @@ Start Zookeeper and Kafka
 ./run_kafka.sh
 ```
 
-Create `noaa-csv-raw` with 5 partitions
-
-```bash
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-csv-raw
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-json
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-json-us-az
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-json-alerts
-```
 
 Check topic, it should have 5 partitions:
 
@@ -118,5 +110,16 @@ USC00029634
 
 Processing task
 
-* Read of `noaa-csv-raw`, write any records that match the station list to their
-own topic (matching station ID).
+* Read of `noaa-json`, write records with AZ in the state to `noaa-json-us-az` topic.
+* Read from `noaa-json-us-az` topic, find those that match station ID: `USW00003192`
+  and where `TMIN` exceeds 10.0, write augmented alert to topic: `noaa-json-alerts`.
+
+
+Create `noaa-csv-raw` with 5 partitions
+
+```bash
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-csv-raw
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-json
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-json-us-az
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 5 --topic noaa-json-alerts
+```
