@@ -53,7 +53,7 @@ def process(data_array):
         for alert in alerts:
             if (record['station']['id'] == alert['station_id']
                 and record['TMIN'] <= 10.0):
-
+                print('.', end='')
                 record['email'] = alert['email']
                 out_data_array.append(record)
     return out_data_array
