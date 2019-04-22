@@ -1,0 +1,21 @@
+name: tjs-monsoon
+channels:
+  - pyviz
+  - conda-forge
+  - defaults
+dependencies:
+  - bokeh
+  - fiona
+  - geopandas
+  - holoviews
+  - hvplot
+  - jupyter
+  - jupyterlab
+  - matplotlib
+  - rasterio
+  - shapely
+  - xarray
+  - pip:
+    - sentinelhub
+prefix: /Users/tjs/anaconda3/envs/tjs-monsoon
+
