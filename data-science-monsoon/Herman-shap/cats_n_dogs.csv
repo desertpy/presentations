@@ -1,0 +1,15 @@
+,Plays fetch,Is grumpy,Favorite food,Species
+0,True,False,Bacon,Dog
+1,False,True,Dog Food,Dog
+2,False,True,Cat Food,Cat
+3,False,True,Bacon,Cat
+4,False,False,Cat Food,Cat
+5,False,True,Bacon,Cat
+6,False,True,Cat Food,Cat
+7,False,False,Dog Food,Dog
+8,False,True,Cat Food,Cat
+9,True,False,Dog Food,Dog
+10,True,False,Bacon,Dog
+11,False,False,Cat Food,Cat
+12,True,True,Cat Food,Cat
+13,True,True,Bacon,Dog

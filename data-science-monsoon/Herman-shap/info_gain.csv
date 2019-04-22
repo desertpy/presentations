@@ -1,0 +1,4 @@
+Split On,Parents Entropy,Child Entropy,Child Entropy,Sum_Entropy_x_Weighted Average,Information Gain
+Plays Fetch,0.9852,0.7642,0.7219,0.7642 * 9/14 + 0.7219 * 5/14 = 0.7491',0.236
+Is Grumpy,0.9852,0.9183,0.8113,0.9183 * 6/14 + 0.8113 * 8/14 = 0.8571',0.128
+Loves Dog Food,0.9852,0.8454,0,0.8454 * 11/14 + 0.000 * 3/14 = 0.6642',0.321
