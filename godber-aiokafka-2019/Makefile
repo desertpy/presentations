@@ -1,11 +1,11 @@
 .PHONY: all clean data help tipcs cleandata cleantopics
 
 help:
-	echo "all - do all setup, gets kafka and data and processes data"
-	echo "clean - deletes temp/"
-	echo "cleandata - deletes /tmp/kafka-logs /tmp/zookeeper"
-	echo "cleantopics - removes kafka topics"
-	echo "topics - creates kafka topics"
+	@echo "all - do all setup, gets kafka and data and processes data"
+	@echo "clean - deletes temp/"
+	@echo "cleandata - deletes /tmp/kafka-logs /tmp/zookeeper"
+	@echo "cleantopics - removes kafka topics"
+	@echo "topics - creates kafka topics"
 
 all: temp/kafka_2.12-2.1.1 data
 
