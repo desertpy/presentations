@@ -17,11 +17,11 @@ cleandata:
 
 data: temp/noaa-2016-sorted.json
 
-temp/kafka_2.12-2.1.1: temp/kafka_2.12-2.1.1.tgz
-	tar -C temp -zxf temp/kafka_2.12-2.1.1.tgz
+temp/kafka_2.12-2.1.1: temp/kafka-2.8.2-src.tgz
+	tar -C temp -zxf temp/kafka-2.8.2-src.tgz
 
-temp/kafka_2.12-2.1.1.tgz: temp
-	wget -P temp/ -nc http://apache.cs.utah.edu/kafka/2.1.1/kafka_2.12-2.1.1.tgz
+temp/kafka-2.8.2-src.tgz: temp
+	wget -P temp/ -nc http://apache.cs.utah.edu/kafka/2.8.2/kafka-2.8.2-src.tgz
 
 temp/noaa-2016-sorted.json: temp/noaa-2016.json
 	@echo "This step requires lots of memory or will take a long time"
