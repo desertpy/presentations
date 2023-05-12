@@ -7,7 +7,7 @@ help:
 	@echo "cleantopics - removes kafka topics"
 	@echo "topics - creates kafka topics"
 
-all: temp/kafka_2.12-2.1.1 data
+all: temp/kafka-2.8.2-src data
 
 clean:
 	rm -rf temp/
@@ -17,7 +17,7 @@ cleandata:
 
 data: temp/noaa-2016-sorted.json
 
-temp/kafka_2.12-2.1.1: temp/kafka-2.8.2-src.tgz
+temp/kafka-2.8.2-src: temp/kafka-2.8.2-src.tgz
 	tar -C temp -zxf temp/kafka-2.8.2-src.tgz
 
 temp/kafka-2.8.2-src.tgz: temp
