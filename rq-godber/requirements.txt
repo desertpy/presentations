@@ -1,5 +1,5 @@
 requests==2.4.3
-PyYAML==3.11
+PyYAML==5.1
 argparse==1.2.1
 backports.ssl-match-hostname==3.4.0.2
 click==3.3
