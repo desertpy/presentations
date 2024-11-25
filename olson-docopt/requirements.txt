@@ -1,5 +1,5 @@
 appnope==0.1.0
-bleach==2.0.0
+bleach==3.1.1
 decorator==4.1.2
 docopt==0.6.2
 entrypoints==0.2.3
